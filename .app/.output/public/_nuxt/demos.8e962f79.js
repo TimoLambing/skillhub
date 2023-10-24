@@ -1,0 +1,1 @@
+import{_ as a,a as _,b as s}from"./LandingFooter.vue.de461c51.js";import{d as c,o as m,a as r,e as o}from"./entry.a9943f59.js";import"./BaseRadio.vue.228277b1.js";const p={class:"dark:bg-muted-900 bg-white pt-16"},b=c({__name:"demos",setup(i){return(d,f)=>{const n=a,e=_,t=s;return m(),r("div",p,[o(n,{cta:!1}),o(e),o(t)])}}});export{b as default};

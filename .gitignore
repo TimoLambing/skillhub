@@ -3,7 +3,6 @@ node_modules
 *.zip
 .nuxt
 nuxt.d.ts
-.output
 dist
 .env
 *Zone.Identifier
