@@ -120,7 +120,7 @@ const filteredDemos = computed(() => {
       <div class="mb-16 max-w-2xl">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
-          >Prebuilt pages</BaseText
+          >Platform specifics</BaseText
         >
         <BaseHeading
           as="h2"
@@ -129,16 +129,13 @@ const filteredDemos = computed(() => {
           lead="tight"
           class="text-muted-800 mx-auto mb-4 dark:text-white"
         >
-          {{ demoPages.length }}+ Amazing demos
+          <!--{{ demoPages.length }}+--> All the amazing features
         </BaseHeading>
         <BaseParagraph
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
         >
-          Tairo ships with {{ demoPages.length }}+ prebuilt pages, including
-          dashboard and app examples, as well as collections like lists, grids,
-          profile and personal pages and many other authentication and utility
-          pages.
+        SkillHub is your comprehensive hiring solution. Access a real-time database of workers with verified skills, available immediately. Our AI-enhanced team ensures the best matches for you. Track tasks, approve work hours, issue invoices, and formalize contracts—all within our platform.
         </BaseParagraph>
       </div>
 

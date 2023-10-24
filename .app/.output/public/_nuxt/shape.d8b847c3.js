@@ -1,1 +1,0 @@
-import{A as a,o,a as c,e as s,a5 as n}from"./entry.a9943f59.js";const t={},r={class:"flex flex-wrap items-end gap-2"};function _(l,d){const e=n;return o(),c("div",r,[s(e,{class:"h-10 w-10 rounded"}),s(e,{class:"h-12 w-12 rounded-xl"}),s(e,{class:"h-16 w-16 rounded-full"})])}const p=a(t,[["render",_]]);export{p as default};

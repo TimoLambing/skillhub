@@ -130,7 +130,7 @@ const candidates = [
             lead="tight"
             class="text-muted-800 mb-2 dark:text-white"
           >
-            <span>Hi, Maya R.</span>
+            <span>Hi, Timo L.</span>
           </BaseHeading>
           <BaseParagraph size="sm">
             <span class="text-muted-400">

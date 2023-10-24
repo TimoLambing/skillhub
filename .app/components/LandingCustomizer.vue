@@ -19,7 +19,7 @@ watch(selectedStyle, (value) => {
       <div class="mb-10 max-w-2xl">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
-          >Talent</BaseText
+          >talent</BaseText
         >
         <BaseHeading
           as="h2"
@@ -41,14 +41,11 @@ watch(selectedStyle, (value) => {
         class="flex w-full flex-col-reverse items-center justify-between gap-6 sm:flex-row"
         aria-hidden="true"
       >
-        <!-- Left -->
+      <div class="relative w-full sm:w-2/5">
+        <img src="/phone.png" alt="jefdjn" />
+      </div>
+        <!-- Left
         <div class="relative w-full sm:w-1/2">
-          <img
-
-                  src="/phone.png"
-                  alt=""
-                />
-          <!--
           <div class="absolute inset-x-0 z-0 -mt-2 py-24">
             <div
               class="mt-12 grid grid-cols-2 -space-x-52 opacity-60 dark:opacity-50 2xl:mx-auto 2xl:max-w-3xl"
@@ -62,7 +59,7 @@ watch(selectedStyle, (value) => {
             </div>
           </div>
           <div
-            class="gridlines relative z-10 flex min-h-[480px] w-full items-center justify-center"
+            class="relative z-10 flex min-h-[480px] w-full items-center justify-center"
           >
             <div
               v-if="toggled"
@@ -337,8 +334,8 @@ watch(selectedStyle, (value) => {
                 </BaseButton>
               </div>
             </BaseCard>
-          </div>-->
-        </div>
+          </div>
+        </div>-->
         <!-- Right -->
         <div class="relative w-full sm:w-1/2">
           <!-- buttons -->
@@ -346,14 +343,44 @@ watch(selectedStyle, (value) => {
             <div
               class="relative mx-auto mt-48 flex w-full max-w-xs flex-wrap sm:mt-0"
             >
-              <img
-                class="absolute -top-48 right-8 w-64"
-                src="/img/illustrations/text-hand.svg"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-              <button
+              <div
+                class="absolute -top-36 left-2 w-96"
+              >
+              <div class="mb-10 max-w-2xl">
+                <BaseText
+                  class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
+                  >questions</BaseText
+                >
+                <BaseHeading
+                  as="h2"
+                  size="4xl"
+                  weight="light"
+                  lead="tight"
+                  class="text-muted-800 mx-auto mb-4 dark:text-white"
+                >
+                Still not convinced?
+                </BaseHeading>
+                <BaseParagraph
+                  size="lg"
+                  class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
+                >
+                We bet you have many questions like these.
+                </BaseParagraph>
+              </div>
+            </div>
+            <BaseCard shape="curved" elevated class="right-16 m-3 p-6 from-primary-700 to-primary-400 opacity-80 bg-gradient-to-tr dark:to-transparent">
+            "Is this platform really good?"
+            </BaseCard>
+            <BaseCard shape="curved" elevated class="left-20 m-3 p-6 from-primary-700 to-primary-400 opacity-80 bg-gradient-to-tl dark:to-transparent">
+            "Will I only waste my time?"
+            </BaseCard>
+            <BaseCard shape="curved" elevated class="right-20 m-3 p-6 from-primary-700 to-primary-400 opacity-80 bg-gradient-to-tr dark:to-transparent">
+              "How is this platform different than all the others?"
+            </BaseCard>
+            <BaseCard shape="curved" elevated class="left-16 m-3 p-6 from-primary-700 to-primary-400 opacity-80 bg-gradient-to-tl dark:to-transparent">
+              Does anybody actually use it?
+            </BaseCard>
+              <!-- <button
                 type="button"
                 class="mx-auto flex h-32 w-40 flex-col items-center justify-center transition-colors duration-200"
                 :class="
@@ -410,12 +437,23 @@ watch(selectedStyle, (value) => {
                   class="mb-2 h-10 w-10"
                 />
                 <span class="font-sans text-sm">Creative</span>
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="mt-24 flex items-center justify-center">
+      <BaseButton
+            shape="curved"
+            color="primary"
+            to="https://go.cssninja.io/buy-tairo"
+            shadow="hover"
+            class="!h-12 w-60"
+          >
+            Find a Job
+          </BaseButton>
+        </div>
   </div>
 </template>
 

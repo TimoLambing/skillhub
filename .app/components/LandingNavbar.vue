@@ -9,11 +9,12 @@ const { open } = usePanels()
 
 <template>
   <div
-    class="group/nav ltablet:max-w-[1000px] ptablet:max-w-[47rem] fixed inset-x-0 top-0 z-50 mx-auto max-w-[350px] group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 lg:max-w-7xl"
+    class="fixed inset-x-0 top-0 z-50 group/nav ltablet:max-w-[1000px] ptablet:max-w-[47rem] mx-auto lg:max-w-full group-[&.scrolled]/landing:mt-0 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200"
   >
-    <div
-      class="group-[&.scrolled]/landing:dark:bg-muted-950/95 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-700 group-[&.scrolled]/landing:motion-safe:shadow-muted-300/30 group-[&.scrolled]/landing:motion-safe:dark:shadow-muted-800/20 flex items-center justify-between rounded-2xl border p-4 group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:bg-white/95 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:motion-safe:shadow-xl"
+  <div
+      class="w-full backdrop-blur-md group-[&.scrolled]/landing:dark:bg-muted-950/30 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-700 group-[&.scrolled]/landing:motion-safe:shadow-muted-300/30 group-[&.scrolled]/landing:motion-safe:dark:shadow-muted-800/20 border-b group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:bg-white/95 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:motion-safe:shadow-xl"
     >
+    <div class="mx-auto lg:max-w-7xl flex p-4">
       <div class="flex w-1/2 items-center gap-2 md:w-1/5">
         <NuxtLink
           to="/"
@@ -21,7 +22,7 @@ const { open } = usePanels()
           aria-label="Go to Tairo homepage"
         >
           <TairoLogoText
-            class="text-primary-500 group-[&.scrolled]/landing:h-5 group-[&:not(.scrolled)]/landing:h-6 motion-safe:transition-all motion-safe:duration-200"
+            class="text-primary-500 group-[&.scrolled]/landing:h-5 group-[&:not(.scrolled)]/landing:h-5 motion-safe:transition-all motion-safe:duration-200"
           />
         </NuxtLink>
       </div>
@@ -96,7 +97,7 @@ const { open } = usePanels()
           </button>
         </div>
       </div>
-      <div class="flex w-1/2 items-center justify-end gap-4 md:w-1/5">
+      <div class="flex-grow flex items-center justify-end gap-4 md:w-1/5">
         <button
           type="button"
           class="border-muted-200 hover:ring-muted-200 dark:hover:ring-muted-700 dark:border-muted-700 dark:bg-muted-800 dark:ring-offset-muted-900 flex h-9 w-9 items-center justify-center rounded-full border bg-white ring-1 ring-transparent transition-all duration-300 hover:ring-offset-4"
@@ -117,16 +118,18 @@ const { open } = usePanels()
           to="/auth"
           class="items-center justify-center ltablet:!flex !hidden lg:!flex"
         >
-          Login
+        <BaseButtonAction shape="full" color="muted">Login</BaseButtonAction>
+
         </NuxtLink>
-        <BaseButton
-          shape="curved"
-          color="primary"
-          to="https://go.cssninja.io/buy-tairo"
-          class="ltablet:!flex !hidden lg:!flex text-nowrap"
-        >
-          Download
-        </BaseButton>
+        <NuxtLink to="/auth">
+          <BaseButtonAction
+            shape="curved"
+            color="primary"
+            class="ltablet:!flex !hidden lg:!flex text-nowrap"
+          >
+            Download
+          </BaseButtonAction>
+        </NuxtLink>
         <button
           type="button"
           class="ltablet:hidden flex items-center justify-center lg:hidden"
@@ -151,4 +154,5 @@ const { open } = usePanels()
       </div>
     </div>
   </div>
+</div>
 </template>

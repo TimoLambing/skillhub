@@ -57,7 +57,7 @@
                   class="motion-safe:animate-spin-slow [animation-delay: 0.3s] absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-tr from-sky-100 to-sky-500 blur-sm transition-all duration-200 dark:from-sky-800"
                 ></div>
                 <div
-                  class="nui-mask nui-mask-hexed dark:bg-muted-800 flex h-[155px] w-[155px] items-center justify-center bg-white"
+                  class="nui-mask nui-mask-hexed dark:bg-muted-800 flex h-[150px] w-[150px] items-center justify-center bg-white"
                 >
                   <Icon
                     name="arcticons:ios-launcher"
@@ -78,7 +78,7 @@
                   class="motion-safe:animate-spin-slow [animation-delay: 0.6s] absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-tr from-indigo-100 to-indigo-500 blur-sm transition-all duration-200 dark:from-indigo-800"
                 ></div>
                 <div
-                  class="nui-mask nui-mask-hexed dark:bg-muted-800 flex h-[155px] w-[155px] items-center justify-center bg-white"
+                  class="nui-mask nui-mask-hexed dark:bg-muted-800 flex h-[150px] w-[150px] items-center justify-center bg-white"
                 >
                   <Icon
                     name="ph:desktop-thin"
