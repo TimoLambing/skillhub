@@ -71,5 +71,8 @@
     "patchedDependencies": {
       "smooth-dnd@0.12.1": "patches/smooth-dnd@0.12.1.patch"
     }
+  },
+  "dependencies": {
+    "@nuxt/devtools": "^1.0.0"
   }
 }
