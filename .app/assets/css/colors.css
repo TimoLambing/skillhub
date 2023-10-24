@@ -1,0 +1,39 @@
+:root {
+  /* violet from tailwind as r g b */
+  --color-primary-50: 238 251 253; /* #f5f3ff */
+  --color-primary-100: 213 242 248; /* #ede9fe */
+  --color-primary-200: 175 230 242; /* #ddd6fe */
+  --color-primary-300: 120 211 232; /* #c4b5fd */
+  --color-primary-400: 58 181 214; /* #a78bfa */
+  --color-primary-500: 34 172 211; /* #a855f7 */
+  --color-primary-600: 28 123 158; /* #9333ea */
+  --color-primary-700: 29 100 129; /* #7e22ce */
+  --color-primary-800: 32 82 106; /* #6b21a8 */
+  --color-primary-900: 31 70 90; /* #581c87 */
+  --color-primary-950: 15 45 61; /* #3b0764 */
+
+  /* slate from tailwind as r g b */
+  --color-muted-50: 248 250 252; /* #f8fafc */
+  --color-muted-100: 241 245 249; /* #f1f5f9 */
+  --color-muted-200: 226 232 240; /* #e2e8f0 */
+  --color-muted-300: 203 213 225; /* #cbd5e1 */
+  --color-muted-400: 148 163 184; /* #94a3b8 */
+  --color-muted-500: 100 116 139; /* #64748b */
+  --color-muted-600: 71 85 105; /* #475569 */
+  --color-muted-700: 51 65 85; /* #334155 */
+  --color-muted-800: 30 41 59; /* #1e293b */
+  --color-muted-900: 15 23 42; /* #0f172a */
+  --color-muted-950: 2 6 23; /* #020617 */
+
+  --shakespeare-50: 238 251 253;
+  --shakespeare-100: 213 242 248;
+  --shakespeare-200: 175 230 242;
+  --shakespeare-300: 120 211 232;
+  --shakespeare-400: 58 181 214;
+  --shakespeare-500: 34 172 211;
+  --shakespeare-600: 28 123 158;
+  --shakespeare-700: 29 100 129;
+  --shakespeare-800: 32 82 106;
+  --shakespeare-900: 31 70 90;
+  --shakespeare-950: 15 45 61;
+}
