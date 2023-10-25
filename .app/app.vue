@@ -67,6 +67,7 @@ useHead({
 </script>
 
 <template>
+  <VitePwaManifest />
   <div>
     <!--
       Global app search modal

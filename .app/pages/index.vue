@@ -30,13 +30,13 @@ useHead({
   <div>
     <LandingHero />
     <LandingCustomizer />
-    <LandingDemos :limit="12" />
+    <!-- <LandingDemos :limit="12" />
     <LandingLayers />
     <LandingLayouts />
     <LandingFeatures />
     <LandingBenefits />
     <LandingCta />
     <LandingContent />
-    <LandingFooter />
+    <LandingFooter /> -->
   </div>
 </template>

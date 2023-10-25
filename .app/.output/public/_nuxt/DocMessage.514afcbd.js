@@ -1,0 +1,1 @@
+import{_ as o}from"./BaseMessage.vue.f5a20212.js";import{r as t}from"./slot.9993d7c2.js";import{A as a,o as r,V as c,w as n,b as _}from"./entry.bd70d1e3.js";import"./node.3e4211de.js";const f={},i={class:"text-xs"};function l(e,m){const s=o;return r(),c(s,null,{default:n(()=>[_("div",i,[t(e.$slots,"default",{unwrap:"p"})])]),_:3})}const B=a(f,[["render",l]]);export{B as default};

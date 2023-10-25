@@ -6,6 +6,7 @@ import {
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   extends: [
     /**
      * This extends the base Tairo layer.
@@ -34,6 +35,37 @@ export default defineNuxtConfig({
     // '../layers/tairo-layout-sidebar',
   ],
 
+  pwa: {
+    manifest: {
+      name: "SkillHub",
+      short_name: "SkillHub",
+      description: "Delivering verified skills to Companies",
+      theme_color: "#000000",
+      icons: [
+        {
+          src: "pwa-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    devOptions: {
+      enabled: true,
+      type: "module",
+    },
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+    }
+  },
+
   /**
    * Load local font with @fontsource packages
    * @see https://fontsource.org/
@@ -45,6 +77,7 @@ export default defineNuxtConfig({
     '@fontsource-variable/inter/index.css',
     '@fontsource-variable/karla/index.css',
   ],
+
   experimental: {
     // using chokidar-granular watcher run faster
     // when using layers and/or in large projects
@@ -69,6 +102,7 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
     },
   },
+
   routeRules: {
     ...demoRules,
     ...landingRules,
@@ -83,6 +117,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   vite: {
     define: {
       'process.test': false,
@@ -95,4 +130,6 @@ export default defineNuxtConfig({
       target: 'esnext',
     },
   },
+
+  modules: ["@nuxt/image", '@vite-pwa/nuxt' ]
 })

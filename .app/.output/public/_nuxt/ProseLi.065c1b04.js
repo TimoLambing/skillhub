@@ -1,1 +1,0 @@
-import{_ as o}from"./BaseListItem.vue.7a784cd0.js";import{A as s,o as r,V as a,w as n,$ as c}from"./entry.573a177d.js";const _={};function f(e,l){const t=o;return r(),a(t,null,{default:n(()=>[c(e.$slots,"default")]),_:3})}const d=s(_,[["render",f]]);export{d as default};
