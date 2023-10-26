@@ -74,15 +74,9 @@ const { open } = usePanels()
               Login
             </BaseButtonAction>
           </NuxtLink>
-
-          <NuxtLink to="/auth" class="lg:hidden">
-            <BaseButtonAction
-              shape="curved"
-              color="primary"
-            >
-              Download
-            </BaseButtonAction>
-          </NuxtLink>
+          <div class="lg:hidden">
+            <PWAIntallerPrompt />
+          </div>
         </div>
         <!-- <NuxtLink
           to="/demos"
@@ -138,15 +132,9 @@ const { open } = usePanels()
           <NuxtLink to="/auth" class="hidden lg:flex">
             <BaseButtonAction shape="full" color="muted">Login</BaseButtonAction>
           </NuxtLink>
-
-          <NuxtLink to="/auth" class="hidden lg:flex">
-            <BaseButtonAction
-              shape="curved"
-              color="primary"
-            >
-              Download
-            </BaseButtonAction>
-          </NuxtLink>
+          <div class="hidden lg:flex">
+            <PWAIntallerPrompt />
+          </div>
         <button
           type="button"
           class="ltablet:hidden flex items-center justify-center lg:hidden"

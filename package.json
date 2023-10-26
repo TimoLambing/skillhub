@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@iconify/json": "2.2.113",
+    "@pinia/nuxt": "^0.5.1",
     "@types/fs-extra": "11.0.1",
     "@typescript-eslint/eslint-plugin": "6.6.0",
     "@vite-pwa/nuxt": "^0.1.1",

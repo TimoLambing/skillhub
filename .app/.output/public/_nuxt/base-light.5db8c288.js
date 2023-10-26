@@ -1,0 +1,1 @@
+import{_ as t}from"./BaseSnack.vue.fa89eec4.js";import{A as c,o,a as s,e as a}from"./entry.eb08ef52.js";const l={},n={class:"flex flex-wrap items-end gap-4"};function r(_,f){const e=t;return o(),s("div",n,[a(e,{label:"React"}),a(e,{label:"Angular"}),a(e,{label:"Vue"}),a(e,{label:"Html"}),a(e,{label:"Python"})])}const p=c(l,[["render",r]]);export{p as default};
