@@ -64,6 +64,26 @@ const { open } = usePanels()
         >
           Articles
         </NuxtLink>
+        <!-- Visible only on mobile -->
+        <div class="flex flex-row">
+          <NuxtLink to="/auth" class="lg:hidden">
+            <BaseButtonAction
+              shape="full"
+              color="muted"
+            >
+              Login
+            </BaseButtonAction>
+          </NuxtLink>
+
+          <NuxtLink to="/auth" class="lg:hidden">
+            <BaseButtonAction
+              shape="curved"
+              color="primary"
+            >
+              Download
+            </BaseButtonAction>
+          </NuxtLink>
+        </div>
         <!-- <NuxtLink
           to="/demos"
           class="inline-flex items-center justify-center px-6"
@@ -90,7 +110,7 @@ const { open } = usePanels()
             <span
               class="group-[&.scrolled]/landing:dark:bg-muted-800 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-700 group-[&.scrolled]/landing:group-hover:text-muted-600 group-[&.scrolled]/landing:dark:group-hover:text-muted-100 rounded-lg border px-2 py-0.5 group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:bg-white group-[&.scrolled]/landing:shadow motion-safe:transition-colors motion-safe:duration-300"
             >
-              <kbd class="font-sans text-sm tracking-wide">
+              <kbd class="font-sans text-sm tracking-wide whitespace-nowrap">
                 {{ metaKey }} + k
               </kbd>
             </span>
@@ -114,22 +134,19 @@ const { open } = usePanels()
           />
         </button>
         <BaseThemeToggle aria-label="Toggle darkmode" />
-        <NuxtLink
-          to="/auth"
-          class="items-center justify-center ltablet:!flex !hidden lg:!flex"
-        >
-        <BaseButtonAction shape="full" color="muted">Login</BaseButtonAction>
+        <!-- Visible only on large screens -->
+          <NuxtLink to="/auth" class="hidden lg:flex">
+            <BaseButtonAction shape="full" color="muted">Login</BaseButtonAction>
+          </NuxtLink>
 
-        </NuxtLink>
-        <NuxtLink to="/auth">
-          <BaseButtonAction
-            shape="curved"
-            color="primary"
-            class="ltablet:!flex !hidden lg:!flex text-nowrap"
-          >
-            Download
-          </BaseButtonAction>
-        </NuxtLink>
+          <NuxtLink to="/auth" class="hidden lg:flex">
+            <BaseButtonAction
+              shape="curved"
+              color="primary"
+            >
+              Download
+            </BaseButtonAction>
+          </NuxtLink>
         <button
           type="button"
           class="ltablet:hidden flex items-center justify-center lg:hidden"

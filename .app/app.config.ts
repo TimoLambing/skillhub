@@ -14,7 +14,7 @@ export default defineAppConfig({
     defaultShapes: {},
   },
   tairo: {
-    title: 'Tairo',
+    title: 'SkillHub',
     sidebar: {
       toolbar: {
         showNavBurger: true,

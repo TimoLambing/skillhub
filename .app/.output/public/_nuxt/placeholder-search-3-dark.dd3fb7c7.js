@@ -1,1 +1,0 @@
-import"./entry.bd70d1e3.js";const l=""+globalThis.__publicAssetsURL("img/illustrations/placeholders/flat/placeholder-search-3.svg"),a=""+globalThis.__publicAssetsURL("img/illustrations/placeholders/flat/placeholder-search-3-dark.svg");export{l as _,a};

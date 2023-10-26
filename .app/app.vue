@@ -21,19 +21,19 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/img/favicon.png',
+      href: '/favicon.png',
     },
   ],
 
   meta: [
-    { name: 'description', content: () => route.meta.description ?? 'The most advanced Nuxt and Tailwind CSS dashboard template' },
+    { name: 'description', content: () => route.meta.description ?? 'The only workforce platform you will ever need' },
     {
       name: 'twitter:card',
       content: 'summary_large_image',
     },
     {
       name: 'twitter:site',
-      content: '@cssninjaStudio',
+      content: '@skillhub',
     },
     {
       name: 'og:image:type',
@@ -53,7 +53,7 @@ useHead({
         route.meta.description ||
           (route.meta.preview
             ? `${route.meta.preview?.title} - ${route.meta.preview?.description}`
-            : 'Nuxt & Tailwind CSS dashboard system'),
+            : 'AI powered workforce manager'),
       )}&url=${encodeURIComponent(
         'https://media.cssninja.io/content/products/logos/tairo-text-white.svg',
       )}&previewUrl=${encodeURIComponent(

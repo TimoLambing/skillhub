@@ -1,16 +1,16 @@
 :root {
   /* violet from tailwind as r g b */
-  --color-primary-50: 238 251 253; /* #f5f3ff */
-  --color-primary-100: 213 242 248; /* #ede9fe */
-  --color-primary-200: 175 230 242; /* #ddd6fe */
-  --color-primary-300: 120 211 232; /* #c4b5fd */
-  --color-primary-400: 58 181 214; /* #a78bfa */
-  --color-primary-500: 34 172 211; /* #a855f7 */
-  --color-primary-600: 28 123 158; /* #9333ea */
-  --color-primary-700: 29 100 129; /* #7e22ce */
-  --color-primary-800: 32 82 106; /* #6b21a8 */
-  --color-primary-900: 31 70 90; /* #581c87 */
-  --color-primary-950: 15 45 61; /* #3b0764 */
+  --color-primary-50: 238 251 253; /* #E9F7FB */
+  --color-primary-100: 213 242 248; /* #D3F0F8 */
+  --color-primary-200: 175 230 242; /* #A3DFF0 */
+  --color-primary-300: 120 211 232; /* #77D0E9 */
+  --color-primary-400: 58 181 214; /* #47C0E1 */
+  --color-primary-500: 34 172 211; /* #22ACD3 */
+  --color-primary-600: 28 123 158; /* #1B89A7 */
+  --color-primary-700: 29 100 129; /* #15687F */
+  --color-primary-800: 32 82 106; /* #0D4453 */
+  --color-primary-900: 31 70 90; /* #07242C */
+  --color-primary-950: 15 45 61; /* #041216 */
 
   /* slate from tailwind as r g b */
   --color-muted-50: 248 250 252; /* #f8fafc */
