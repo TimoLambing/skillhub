@@ -1,1 +1,0 @@
-import"./entry.3835d912.js";const l=""+globalThis.__publicAssetsURL("img/illustrations/placeholders/flat/placeholder-projects.svg"),o=""+globalThis.__publicAssetsURL("img/illustrations/placeholders/flat/placeholder-projects-dark.svg");export{l as _,o as a};

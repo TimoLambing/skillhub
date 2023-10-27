@@ -5,3 +5,34 @@
 .st0 {
   fill: #ffffff;
 }
+
+.btn-area {
+  text-align: center;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .btn-area {
+    justify-content: space-around;
+  }
+}
+
+.btn-area a {
+  margin-right: 16px; /* Assuming $spacing2 equals 16px */
+}
+
+@media (max-width: 576px) {
+  .btn-area a {
+    margin: 4px;
+  }
+}
+
+.btn-area a img {
+  width: 160px;
+}
+
+@media (max-width: 576px) {
+  .btn-area a img {
+    width: 100%;
+  }
+}

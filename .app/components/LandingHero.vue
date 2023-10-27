@@ -140,6 +140,9 @@ function useGaugePersonal() {
         </div>
       </div>
       <div class="relative z-30 pt-32 text-center">
+        <BaseText
+          class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
+          >Corporate</BaseText>
         <BaseHeading
           as="h1"
           size="3xl"
@@ -154,6 +157,15 @@ function useGaugePersonal() {
           >
         </BaseHeading>
       </div>
+      <div class="btn-area items-center justify-center">
+              <nuxt-link to="/">
+                <img src="/img/mobile/app-store.png" alt="app store">
+              </nuxt-link>
+              <nuxt-link to="/">
+                <img src="/img/mobile/play-store.png" alt="play store">
+              </nuxt-link>
+              <div id="watched_counter" />
+            </div>
       <!-- Components -->
       <fieldset
         disabled
@@ -369,9 +381,6 @@ function useGaugePersonal() {
           </div>
         </div>
       </fieldset>
-
-      <!-- Components -->
-      <LandingHeroMockup />
     </div>
   </div>
 </template>

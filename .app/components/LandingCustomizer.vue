@@ -14,9 +14,9 @@ watch(selectedStyle, (value) => {
 </script>
 
 <template>
-  <div class="dark:bg-muted-900 overflow-hidden bg-white py-24">
-    <div class="mx-auto w-full max-w-7xl px-4">
-      <div class="mb-10 max-w-2xl">
+  <div class="dark:bg-muted-900 overflow-hidden bg-white py-24 justify-center items-center">
+    <div class="mx-auto w-full max-w-7xl px-4 justify-center items-center">
+      <div class="mb-10 max-w-3xl text-center justify-center items-center">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
           >talent</BaseText

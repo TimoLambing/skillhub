@@ -30,6 +30,7 @@ useHead({
   <div>
     <LandingHero />
     <LandingCustomizer />
+    <LandingHeroMockup />
     <!-- <LandingDemos :limit="12" />
     <LandingLayers />
     <LandingLayouts />
