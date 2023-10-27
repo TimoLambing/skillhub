@@ -35,10 +35,10 @@ const props = withDefaults(
     </div>
     <div class="flex flex-col">
       <p class="text-primary-500 my-1 font-sans text-xs uppercase">
-        Marketing Videos
+        Suggested Videos
       </p>
       <BaseHeading as="h3" size="sm" weight="medium" lead="tight">
-        <span>How to be the #1 seller</span>
+        <span>How to be efficient in Human Resource management</span>
       </BaseHeading>
       <div
         class="text-muted-400 mt-auto flex items-center gap-2 font-sans text-xs"

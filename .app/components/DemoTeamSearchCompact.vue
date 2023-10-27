@@ -72,7 +72,7 @@ const filteredMembers = computed(() => {
       <BaseInput
         v-model="filter"
         icon="lucide:search"
-        placeholder="Search team members..."
+        placeholder="Search for specialists..."
         :shape="props.shape"
       />
     </div>

@@ -293,7 +293,7 @@ function useGaugePersonal() {
                     lead="tight"
                     class="text-muted-800 dark:text-white"
                   >
-                    <span>Personal Score</span>
+                    <span>Projects status</span>
                   </BaseHeading>
                 </div>
                 <div class="flex justify-center py-16">
@@ -305,7 +305,7 @@ function useGaugePersonal() {
                 <div class="mt-auto text-center">
                   <BaseParagraph size="sm">
                     <span class="text-muted-400">
-                      Your score has been calculated based on the latest metrics
+                      The overall progress of all the ongoing projects
                     </span>
                   </BaseParagraph>
                 </div>
