@@ -139,6 +139,21 @@ function useGaugePersonal() {
           </BaseButton>
         </div>
       </div>
+      <div class="relative z-30 pt-32 text-center">
+        <BaseHeading
+          as="h1"
+          size="3xl"
+          weight="light"
+          lead="tight"
+          class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
+        >
+          This will be your
+          <span
+            class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
+            >Dashboard</span
+          >
+        </BaseHeading>
+      </div>
       <!-- Components -->
       <fieldset
         disabled
