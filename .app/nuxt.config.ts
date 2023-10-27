@@ -131,8 +131,11 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", '@vite-pwa/nuxt', '@pinia/nuxt' ],
+  modules: ["@nuxt/image", '@vite-pwa/nuxt', '@pinia/nuxt', 'nuxt-gtag' ],
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
+  gtag: {
+    id: 'G-H72N63BVW3'
   },
 })
