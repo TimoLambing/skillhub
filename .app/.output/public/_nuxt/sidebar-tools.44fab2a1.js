@@ -1,1 +1,0 @@
-import{A as o,o as s,a,e as c,S as t}from"./entry.c326b3b9.js";const n={},r={class:"flex items-end gap-3"};function _(i,d){const e=t;return s(),a("div",r,[c(e)])}const l=o(n,[["render",_]]);export{l as default};

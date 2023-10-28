@@ -1,0 +1,1 @@
+import{d as t,a1 as o,o as s,a as l,e as r,w as c,f as u,h as _,k as p}from"./entry.7a674c3f.js";const g=t({__name:"language",setup(f){const{open:a}=o();return(m,e)=>{const n=p;return s(),l("div",null,[r(n,{onClick:e[0]||(e[0]=d=>_(a)("language"))},{default:c(()=>[u("Open Panel")]),_:1})])}}});export{g as default};

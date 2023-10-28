@@ -140,7 +140,7 @@ function useGaugePersonal() {
             </BaseButton>
           </div>
         </div>
-        <div class="relative z-30 text-center">
+        <div data-aos="zoom-in" data-aos-duration="400" class="relative z-30 text-center">
           <SVGMorph />
         </div>
       </div>
