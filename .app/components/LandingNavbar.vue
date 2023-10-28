@@ -37,30 +37,35 @@ const { open } = usePanels()
       <NuxtLink
           to="/documentation"
           class="inline-flex items-center justify-center px-6"
+          data-aos="zoom-in" data-aos-duration="1500"
         >
           Recruiters
         </NuxtLink>
         <NuxtLink
           to="/documentation"
           class="inline-flex items-center justify-center px-6"
+          data-aos="zoom-in" data-aos-duration="1200"
         >
           Talents
         </NuxtLink>
         <NuxtLink
           to="/documentation"
           class="inline-flex items-center justify-center px-6"
+          data-aos="zoom-in" data-aos-duration="900"
         >
           About
         </NuxtLink>
         <NuxtLink
           to="/documentation"
           class="inline-flex items-center justify-center px-6"
+          data-aos="zoom-in" data-aos-duration="600"
         >
           Contact
         </NuxtLink>
         <NuxtLink
           to="/documentation"
           class="inline-flex items-center justify-center px-6"
+          data-aos="zoom-in" data-aos-duration="300"
         >
           Articles
         </NuxtLink>

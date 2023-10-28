@@ -96,47 +96,52 @@ function useGaugePersonal() {
       </div>
     </div>
     <div class="mx-auto w-full max-w-7xl px-4">
-      <div class="relative z-30 pt-32 text-center">
-        <BaseHeading
-          as="h1"
-          size="5xl"
-          weight="light"
-          lead="tight"
-          class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
-        >
-          We got the
-          <span
-            class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
-            >Skills</span
+      <div class="grid md:grid-cols-2 gap-4 pt-32 md:pt-20 items-center justify-center">
+        <div data-aos="zoom-in" data-aos-duration="1200" class="relative z-30 text-center mb-[20%]">
+          <BaseHeading
+            as="h1"
+            size="5xl"
+            weight="light"
+            lead="tight"
+            class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
           >
-        </BaseHeading>
-        <BaseParagraph
-          size="lg"
-          class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
-        >
-          The only workforce platform you will ever need.<br />
-          AI and human synergy that finds top talent for firms and maintains oversight.
-        </BaseParagraph>
-        <div class="flex flex-row items-center justify-center gap-2">
-          <BaseButton
-          flavor="outline"
-            shape="curved"
-            color="primary"
-            to="https://go.cssninja.io/buy-tairo"
-            shadow="hover"
-            class="!h-12 w-44"
+            We got the
+            <span
+              class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
+              >Skills</span
+            >
+          </BaseHeading>
+          <BaseParagraph
+            size="lg"
+            class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
           >
-            Rent Talents
-          </BaseButton>
-          <BaseButton
-            shape="curved"
-            color="primary"
-            to="https://go.cssninja.io/buy-tairo"
-            shadow="hover"
-            class="!h-12 w-44"
-          >
-            Find a Job
-          </BaseButton>
+            The only workforce platform you will ever need.<br />
+            AI and human synergy that finds top talent for firms and maintains oversight.
+          </BaseParagraph>
+          <div class="flex flex-row items-center justify-center gap-2">
+            <BaseButton
+            flavor="outline"
+              shape="curved"
+              color="primary"
+              to="https://go.cssninja.io/buy-tairo"
+              shadow="hover"
+              class="!h-12 w-44"
+            >
+              Rent Talents
+            </BaseButton>
+            <BaseButton
+              shape="curved"
+              color="primary"
+              to="https://go.cssninja.io/buy-tairo"
+              shadow="hover"
+              class="!h-12 w-44"
+            >
+              Find a Job
+            </BaseButton>
+          </div>
+        </div>
+        <div class="relative z-30 text-center">
+          <SVGMorph />
         </div>
       </div>
       <div class="relative z-30 pt-32 text-center">

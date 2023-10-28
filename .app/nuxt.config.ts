@@ -131,7 +131,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", '@vite-pwa/nuxt', '@pinia/nuxt', 'nuxt-gtag' ],
+  modules: ["@nuxt/image", '@vite-pwa/nuxt', '@pinia/nuxt', 'nuxt-gtag', 'nuxt-aos' ],
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
