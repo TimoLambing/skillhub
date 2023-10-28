@@ -5,7 +5,7 @@ import {
 } from './config/routes-rules'
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   extends: [
     /**
