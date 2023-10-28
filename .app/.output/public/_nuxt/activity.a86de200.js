@@ -1,1 +1,0 @@
-import{d as n,a1 as o,o as s,a as c,e as r,w as i,f as _,h as l,k as p}from"./entry.7a674c3f.js";const k=n({__name:"activity",setup(u){const{open:t}=o();return(f,e)=>{const a=p;return s(),c("div",null,[r(a,{onClick:e[0]||(e[0]=m=>l(t)("activity"))},{default:i(()=>[_("Open Panel")]),_:1})])}}});export{k as default};

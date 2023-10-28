@@ -109,7 +109,7 @@ function useGaugePersonal() {
             <span
               class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
               >Skills</span
-            >
+            > your company needs
           </BaseHeading>
           <BaseParagraph
             size="lg"
