@@ -79,8 +79,10 @@
     }
   },
   "dependencies": {
+    "@jridgewell/sourcemap-codec": "^1.4.15",
     "@nuxt/devtools": "^1.0.0",
     "@nuxt/image": "^1.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "ipx": "^2.0.0"
   }
 }
