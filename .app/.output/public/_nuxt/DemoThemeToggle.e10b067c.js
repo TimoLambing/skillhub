@@ -1,1 +1,0 @@
-import{_ as o}from"./BaseThemeToggle.vue.ff72aea3.js";import{E as c,o as r,a0 as t}from"./entry.fcfe2dbb.js";import"./composables.1744454e.js";const n={};function s(_,a){const e=o;return r(),t(e)}const i=c(n,[["render",s]]);export{i as default};

@@ -1,1 +1,0 @@
-import{E as o,o as t,e as n,a5 as s}from"./entry.fcfe2dbb.js";const c={},r={class:"nui-button-group"};function _(e,a){return t(),n("div",r,[s(e.$slots,"default")])}const u=o(c,[["render",_]]);export{u as _};
