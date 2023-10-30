@@ -1,1 +1,0 @@
-import{d as t,a7 as s,o,e as r,g as c,w as _,h as l,j as p,m}from"./entry.cb41b48b.js";const x=t({__name:"search",setup(u){const{open:n}=s();return(d,e)=>{const a=m;return o(),r("div",null,[c(a,{onClick:e[0]||(e[0]=f=>p(n)("search"))},{default:_(()=>[l("Open Panel")]),_:1})])}}});export{x as default};

@@ -144,7 +144,7 @@ function useGaugePersonal() {
           <SVGMorph />
         </div>
       </div>
-      <TairoToaster />
+      <Toaster />
       <div class="relative z-30 pt-32 text-center">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"

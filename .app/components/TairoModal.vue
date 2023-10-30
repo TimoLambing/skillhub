@@ -50,6 +50,10 @@ const props = withDefaults(
   },
 )
 
+const closeModal = () => {
+  emit('close');
+};
+
 const emit = defineEmits(['close'])
 
 const dialogClasses = computed(() => {
@@ -131,19 +135,7 @@ const dialogClasses = computed(() => {
                 class="dark:bg-muted-800 w-full bg-white text-left align-middle shadow-xl transition-all"
                 :class="dialogClasses"
               >
-                <InvestmentModal>
-                  <template #header>
-                    <!-- Header -->
-                    <div class="flex w-full items-center justify-between p-4 md:p-6">
-                      <h3
-                        class="font-heading text-muted-900 text-lg font-medium leading-6 dark:text-white"
-                      >
-                        Invest in SkillHub
-                      </h3>
-                      <BaseButtonClose />
-                    </div>
-                  </template>
-                  </InvestmentModal>
+                <InvestmentModal  @close-modal="closeModal" />
               </DialogPanel>
             </TransitionChild>
           </div>

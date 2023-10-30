@@ -7,7 +7,7 @@
                       >
                         Invest in SkillHub
                       </h3>
-                      <BaseButtonClose />
+                      <BaseButtonClose @click="emit('close-modal')" />
                     </div>
   <!-- Body -->
   <div class="p-4 md:p-6 overflow-auto max-h-[70vh]">
@@ -159,8 +159,15 @@
       </h4>
   </div>
   <div class="flex w-full mx-auto items-center justify-center">
-    <ContactModal />
+    <ContactModal @close-modal="emit('close-modal')" />
   </div>
   </div>
 </div>
 </template>
+
+<script setup lang="ts">
+import { defineEmits } from 'vue';
+
+const emit = defineEmits(['close-modal']);  // Define close-modal event here
+// ...rest of your code
+</script>

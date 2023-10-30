@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-lg">
-    <BaseCard class="p-6">
+    <BaseCard v-if="showModal" class="p-6">
       <form action="" method="POST" @submit.prevent="onSubmit" novalidate>
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12 sm:col-span-6">
@@ -83,6 +83,10 @@ import { toTypedSchema } from '@vee-validate/zod'
 import { Field, useForm } from 'vee-validate'
 import { z } from 'zod'
 
+const emit = defineEmits(['close-modal']);  // Define close-modal event here
+
+const showModal = ref(true)
+
 // This is the object that will contain the validation messages
 const VALIDATION_TEXT = {
   FIRSTNAME_REQUIRED: "First name can't be empty",
@@ -143,28 +147,48 @@ const onSubmit = handleSubmit(
   async (values) => {
     success.value = false
 
-    // here you have access to the validated form values
-    console.log('message-send-success', values)
-
     try {
-      // fake delay, this will make isSubmitting value to be true
-      await new Promise((resolve, reject) => {
-        if (values.firstName === 'Hanzo') {
-          // simulate a backend error
-          setTimeout(() => reject(new Error('Fake backend validation error')), 2000)
-        }
-        setTimeout(resolve, 4000)
+      // Make an HTTP POST request to the server-side endpoint
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: `${values.firstName} ${values.lastName}`,
+          email: values.email,
+          subject: 'Contact Form Submission',
+          message: values.message,
+        }),
       })
 
-      toaster.clearAll()
-      toaster.show({
-        title: 'Success',
-        message: `Message has been sent!`,
-        color: 'success',
-        icon: 'ph:check',
-        closable: true,
-      })
+      // Check if the response status is OK (status code 200)
+      if (response.ok) {
+        toaster.clearAll()
+        toaster.show({
+          title: 'Success',
+          message: `Message has been sent!`,
+          color: 'success',
+          icon: 'ph:check',
+          closable: true,
+        })
+
+        emit('close-modal')
+      } else {
+        // Handle non-successful response here (e.g., show an error toaster)
+        console.error('Server responded with status', response.status);
+        toaster.clearAll()
+        toaster.show({
+          title: 'Error',
+          message: `Failed to send message. Server responded with status: ${response.status}`,
+          color: 'danger',
+          icon: 'lucide:alert-triangle',
+          closable: true,
+        })
+      }
+
     } catch (error: any) {
+      console.error(error);
       // this will set the error on the form
       if (error.message === 'Fake backend validation error') {
         setFieldError('firstName', 'This name is not allowed')
