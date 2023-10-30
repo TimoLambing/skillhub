@@ -1,1 +1,0 @@
-import{E as e,o,e as c,g as n,dA as a}from"./entry.5f1d6f14.js";const s={};function t(_,d){const r=a;return o(),c("div",null,[n(r,{error:"An error has occured"})])}const i=e(s,[["render",t]]);export{i as default};

@@ -101,7 +101,6 @@ export default defineNuxtConfig({
     MAILUSER: process.env.MAILUSER,
     MAILPASSWORD: process.env.MAILPASSWORD,
     CONTACTMAIL: process.env.CONTACTMAIL,
-    MAILAPI: process.env.MAILAPI,
     public: {
       // mapbox config
       mapboxToken: process.env.NUXT_PUBLIC_MAPBOX_TOKEN,
