@@ -1,0 +1,1 @@
+import{d as a,a7 as o,o as s,e as c,g as r,w as i,h as _,j as l,m as p}from"./entry.fcfe2dbb.js";const v=a({__name:"activity",setup(m){const{open:t}=o();return(u,e)=>{const n=p;return s(),c("div",null,[r(n,{onClick:e[0]||(e[0]=d=>l(t)("activity"))},{default:i(()=>[_("Open Panel")]),_:1})])}}});export{v as default};
