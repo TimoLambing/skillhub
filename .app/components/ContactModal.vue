@@ -149,7 +149,7 @@ const onSubmit = handleSubmit(
 
     try {
       // Make an HTTP POST request to the server-side endpoint
-      const response = await fetch(process.env.NUXT_ENV_API_CONTACT, {
+      const response = await fetch('https://www.skillhub.ee/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
