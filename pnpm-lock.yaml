@@ -16,6 +16,9 @@ importers:
       '@jridgewell/sourcemap-codec':
         specifier: ^1.4.15
         version: 1.4.15
+      '@netlify/functions':
+        specifier: ^2.3.0
+        version: 2.3.0
       '@nuxt/devtools':
         specifier: ^1.0.0
         version: 1.0.0(nuxt@3.8.0)(rollup@2.79.1)

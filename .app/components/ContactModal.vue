@@ -149,7 +149,7 @@ const onSubmit = handleSubmit(
 
     try {
       // Make an HTTP POST request to the server-side endpoint
-      const response = await fetch('https://lighthearted-dieffenbachia-cc710a.netlify.app/api/contact', {
+      const response = await fetch('https://skillhub.ee/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

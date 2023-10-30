@@ -1,1 +1,0 @@
-import{_ as a}from"./BaseList.vue.c05a933b.js";import{E as o,o as t,a0 as r,w as c,a5 as n}from"./entry.d1d0b40f.js";const _={};function f(e,l){const s=a;return t(),r(s,{media:!1},{default:c(()=>[n(e.$slots,"default")]),_:3})}const d=o(_,[["render",f]]);export{d as default};
