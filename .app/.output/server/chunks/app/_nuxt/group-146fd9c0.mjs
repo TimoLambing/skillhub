@@ -1,0 +1,4 @@
+const group = '<template>\n  <BaseButtonGroup>\n    <BaseButtonAction shape="rounded"> View </BaseButtonAction>\n\n    <BaseButtonAction shape="straight">\n      <Icon name="ph:pen" class="h-4 w-4" />\n    </BaseButtonAction>\n\n    <BaseButtonAction muted shape="straight">Muted</BaseButtonAction>\n\n    <BaseDropdown label="plus">\n      <template #button>\n        <BaseButtonAction shape="rounded"> plus </BaseButtonAction>\n      </template>\n\n      <BaseDropdownItem> Edit </BaseDropdownItem>\n\n      <BaseDropdownItem> Cancel </BaseDropdownItem>\n    </BaseDropdown>\n\n    <BaseButtonAction disabled shape="straight"> Disabled </BaseButtonAction>\n\n    <BaseButtonAction shape="rounded"> Share </BaseButtonAction>\n  </BaseButtonGroup>\n</template>\n';
+
+export { group as default };
+//# sourceMappingURL=group-146fd9c0.mjs.map

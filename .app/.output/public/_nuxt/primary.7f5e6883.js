@@ -1,0 +1,1 @@
+import{E as o,o as a,e as s,g as r,$ as c}from"./entry.ce48552a.js";const t={},n={class:"flex flex-wrap items-end gap-2"};function p(l,_){const e=c;return a(),s("div",n,[r(e,{shape:"straight",color:"primary"}),r(e,{shape:"rounded",color:"primary"}),r(e,{shape:"curved",color:"primary"}),r(e,{shape:"full",color:"primary"})])}const m=o(t,[["render",p]]);export{m as default};
