@@ -1,0 +1,4 @@
+const fa = '<template>\n  <div class="flex items-end gap-4">\n    <Icon\n      name="fa6-solid:computer-mouse"\n      class="text-muted-400 dark:text-muted-500 block h-6 w-6"\n    />\n\n    <Icon\n      name="fa6-solid:computer-mouse"\n      class="text-muted-400 dark:text-muted-500 block h-7 w-7"\n    />\n\n    <Icon\n      name="fa6-solid:computer-mouse"\n      class="text-muted-400 dark:text-muted-500 block h-8 w-8"\n    />\n\n    <Icon\n      name="fa6-solid:computer-mouse"\n      class="text-muted-400 dark:text-muted-500 block h-9 w-9"\n    />\n\n    <Icon\n      name="fa6-solid:computer-mouse"\n      class="text-muted-400 dark:text-muted-500 block h-10 w-10"\n    />\n\n    <Icon name="fa6-solid:computer-mouse" class="block h-12 w-12 text-fuchsia-500" />\n  </div>\n</template>\n';
+
+export { fa as default };
+//# sourceMappingURL=fa-2e985afb.mjs.map

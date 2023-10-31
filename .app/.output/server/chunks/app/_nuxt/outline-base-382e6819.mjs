@@ -1,0 +1,4 @@
+const outlineBase = '<template>\n  <div class="flex flex-wrap items-end gap-4">\n    <BaseIconBox size="lg" shape="full" flavor="outline" color="primary">\n      <Icon name="ph:armchair-duotone" class="h-6 w-6" />\n    </BaseIconBox>\n\n    <BaseIconBox size="lg" shape="full" flavor="outline" color="info">\n      <Icon name="ph:confetti-duotone" class="h-6 w-6" />\n    </BaseIconBox>\n\n    <BaseIconBox size="lg" shape="full" flavor="outline" color="success">\n      <Icon name="ph:check-circle-duotone" class="h-6 w-6" />\n    </BaseIconBox>\n\n    <BaseIconBox size="lg" shape="full" flavor="outline" color="warning">\n      <Icon name="ph:lightbulb-duotone" class="h-6 w-6" />\n    </BaseIconBox>\n\n    <BaseIconBox size="lg" shape="full" flavor="outline" color="danger">\n      <Icon name="ph:cookie-duotone" class="h-6 w-6" />\n    </BaseIconBox>\n  </div>\n</template>\n';
+
+export { outlineBase as default };
+//# sourceMappingURL=outline-base-382e6819.mjs.map

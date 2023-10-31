@@ -1,0 +1,4 @@
+const squareDot = '<template>\n  <div class="flex flex-wrap items-end gap-4">\n    <BaseAvatar src="/img/avatars/1.svg" size="xs" shape="curved" dot="success" />\n\n    <BaseAvatar src="/img/avatars/5.svg" shape="curved" dot="info" />\n\n    <BaseAvatar src="/img/avatars/4.svg" size="md" shape="curved" dot="warning" />\n\n    <BaseAvatar src="/img/avatars/3.svg" size="lg" shape="curved" dot="pink" />\n\n    <BaseAvatar src="/img/avatars/8.svg" size="xl" shape="curved" dot="danger" />\n\n    <BaseAvatar src="/img/avatars/16.svg" size="2xl" shape="curved" dot="yellow" />\n\n    <BaseAvatar src="/img/avatars/2.svg" size="3xl" shape="curved" dot="info" />\n\n    <BaseAvatar src="/img/avatars/20.svg" size="4xl" shape="curved" dot="success" />\n  </div>\n</template>\n';
+
+export { squareDot as default };
+//# sourceMappingURL=square-dot-d61f6591.mjs.map
