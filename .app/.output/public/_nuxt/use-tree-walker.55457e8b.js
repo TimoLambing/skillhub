@@ -1,1 +1,0 @@
-import{a9 as f,aO as d}from"./entry.5f5261f9.js";function p({container:e,accept:t,walk:l,enabled:r}){f(()=>{let a=e.value;if(!a||r!==void 0&&!r.value)return;let c=d(e);if(!c)return;let o=Object.assign(i=>t(i),{acceptNode:t}),n=c.createTreeWalker(a,NodeFilter.SHOW_ELEMENT,o,!1);for(;n.nextNode();)l(n.currentNode)})}export{p};

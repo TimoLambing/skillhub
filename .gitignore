@@ -5,4 +5,8 @@ node_modules
 nuxt.d.ts
 dist
 .env
+.output
 *Zone.Identifier
+
+# Local Netlify folder
+.netlify

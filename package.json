@@ -84,6 +84,7 @@
     "@nuxt/devtools": "^1.0.0",
     "@nuxt/image": "^1.0.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "ipx": "^2.0.0"
+    "ipx": "^2.0.0",
+    "netlify-cli": "^16.9.3"
   }
 }
