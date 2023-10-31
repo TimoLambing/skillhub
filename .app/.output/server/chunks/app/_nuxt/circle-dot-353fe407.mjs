@@ -1,4 +1,0 @@
-const circleDot = '<template>\n  <div class="flex flex-wrap items-end gap-4">\n    <BaseAvatar src="/img/avatars/1.svg" shape="full" size="xs" dot="success" />\n\n    <BaseAvatar src="/img/avatars/5.svg" shape="full" dot="info" />\n\n    <BaseAvatar src="/img/avatars/4.svg" shape="full" size="md" dot="warning" />\n\n    <BaseAvatar src="/img/avatars/3.svg" shape="full" size="lg" dot="pink" />\n\n    <BaseAvatar src="/img/avatars/8.svg" shape="full" size="xl" dot="danger" />\n\n    <BaseAvatar src="/img/avatars/16.svg" shape="full" size="2xl" dot="yellow" />\n\n    <BaseAvatar src="/img/avatars/2.svg" shape="full" size="3xl" dot="info" />\n\n    <BaseAvatar src="/img/avatars/20.svg" shape="full" size="4xl" dot="success" />\n  </div>\n</template>\n';
-
-export { circleDot as default };
-//# sourceMappingURL=circle-dot-353fe407.mjs.map
