@@ -143,4 +143,15 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-H72N63BVW3'
   },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+     cssnano:
+       process.env.NODE_ENV === 'production'
+         ? { preset: ['default', { discardComments: { removeAll: true } }] }
+         : false, // disable cssnano when not in production
+    },
+ }
 })

@@ -112,6 +112,10 @@ importers:
         version: 1.8.11(typescript@5.2.2)
 
   .app:
+    dependencies:
+      pnpm:
+        specifier: ^8.10.0
+        version: 8.10.0
     devDependencies:
       '@fontsource-variable/inter':
         specifier: ^5.0.8
@@ -14103,6 +14107,12 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.4.2
       pathe: 1.1.1
+
+  /pnpm@8.10.0:
+    resolution: {integrity: sha512-nCy4Pyts9qJdjFgwC/mRl8fvO+hM8+dm8pBUtAuDtC+Kq6b8wxSp7PJ8APfOgKdXu0xgiADnrb4tKdxccFb1vg==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
 
   /portfinder@1.0.32:
     resolution: {integrity: sha512-on2ZJVVDXRADWE6jnQaX0ioEylzgBpQk8r55NE4wjXW1ZxO+BgDlY6DXwj20i0V8eB4SenDQ00WEaxfiIQPcxg==}

@@ -13,5 +13,8 @@
     "build": "nuxi build",
     "generate": "nuxi generate",
     "clean": "rimraf .nuxt .output node_modules"
+  },
+  "dependencies": {
+    "pnpm": "^8.10.0"
   }
 }
