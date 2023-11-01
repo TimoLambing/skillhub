@@ -1,4 +1,0 @@
-const carbon = '<template>\n  <div class="flex items-end gap-4">\n    <Icon\n      name="carbon:tropical-storm-tracks"\n      class="text-muted-400 dark:text-muted-500 block h-6 w-6"\n    />\n\n    <Icon\n      name="carbon:tropical-storm-tracks"\n      class="text-muted-400 dark:text-muted-500 block h-7 w-7"\n    />\n\n    <Icon\n      name="carbon:tropical-storm-tracks"\n      class="text-muted-400 dark:text-muted-500 block h-8 w-8"\n    />\n\n    <Icon\n      name="carbon:tropical-storm-tracks"\n      class="text-muted-400 dark:text-muted-500 block h-9 w-9"\n    />\n\n    <Icon\n      name="carbon:tropical-storm-tracks"\n      class="text-muted-400 dark:text-muted-500 block h-10 w-10"\n    />\n\n    <Icon name="carbon:tropical-storm-tracks" class="text-primary-500 block h-12 w-12" />\n  </div>\n</template>\n';
-
-export { carbon as default };
-//# sourceMappingURL=carbon-2463ca79.mjs.map

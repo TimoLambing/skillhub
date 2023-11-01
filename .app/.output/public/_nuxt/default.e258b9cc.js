@@ -1,0 +1,1 @@
+import{E as t,a0 as o,w as s,bD as n,o as r,a5 as c}from"./entry.adb22a9c.js";const _={};function f(a,l){const e=n;return r(),o(e,null,{default:s(()=>[c(a.$slots,"default")]),_:3})}const u=t(_,[["render",f]]);export{u as default};
