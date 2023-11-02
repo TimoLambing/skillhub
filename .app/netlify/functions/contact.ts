@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+const nodemailer = require('nodemailer')
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.zoho.eu',
@@ -9,11 +9,11 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-export async function handler(event: { body: string }, context: any) {
+exports.handler = function (event: { body: string }, context: any) {
   try {
     const body = JSON.parse(event.body)
 
-    const mail = await transporter.sendMail({
+    transporter.sendMail({
       from: process.env.CONTACTMAIL,
       to: process.env.CONTACTMAIL,
       subject: body.subject,
@@ -89,8 +89,6 @@ export async function handler(event: { body: string }, context: any) {
     }
   }
 }
-
-export { handler as default }
 
 // Configure the contact endpoint path
 export const config = {
