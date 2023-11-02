@@ -86,3 +86,8 @@ exports.handler = async (event) => {
     }
   }
 }
+
+// Configure the contact endpoint path
+export const config = {
+  path: '/contact',
+}
