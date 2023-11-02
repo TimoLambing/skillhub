@@ -1,13 +1,13 @@
 import nodemailer from 'nodemailer'
 
-// const config = useRuntimeConfig()
+const config = useRuntimeConfig()
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.zoho.eu',
-  port: '587',
+  host: config.MAILHOST,
+  port: config.MAILPORT,
   auth: {
-    user: 'timo@skillhub.ee',
-    pass: 'Onamission#007',
+    user: config.MAILUSER,
+    pass: config.MAILPASSWORD,
   },
 })
 
@@ -16,8 +16,8 @@ export default defineEventHandler(async (event, response) => {
     const body = await readBody(event)
 
     const mail = await transporter.sendMail({
-      from: 'timo@skillhub.ee',
-      to: 'timo@skillhub.ee',
+      from: config.CONTACTMAIL,
+      to: config.CONTACTMAIL,
       subject: body.subject,
       text: body.message,
       html: `
@@ -94,8 +94,3 @@ export default defineEventHandler(async (event, response) => {
     };
   }
 }); */
-
-// Configure the contact endpoint path
-export const config = {
-  path: '/contact',
-}
