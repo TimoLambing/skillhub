@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+const nodemailer = require('nodemailer')
 
 // Check if the environment variables are defined
 if (
@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-export async function handler(event: { body: string }, context: any) {
+exports.handler = async function (event: { body: string }, context: any) {
   try {
     // Check if 'event.body' is defined
     if (!event.body) {
@@ -106,8 +106,6 @@ export async function handler(event: { body: string }, context: any) {
     }
   }
 }
-
-export { handler as default }
 
 // Configure the contact endpoint path
 export const config = {
