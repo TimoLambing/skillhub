@@ -1,34 +1,19 @@
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
 
-// Check if the environment variables are defined
-if (
-  !process.env.MAILHOST ||
-  !process.env.MAILPORT ||
-  !process.env.MAILUSER ||
-  !process.env.MAILPASSWORD
-) {
-  throw new Error('Missing environment variables for nodemailer configuration')
-}
+// const endpointConfig = useRuntimeConfig()
 
 const transporter = nodemailer.createTransport({
   host: process.env.MAILHOST,
-  port: parseInt(process.env.MAILPORT, 10), // Parse to integer
+  port: process.env.MAILPORT,
   auth: {
     user: process.env.MAILUSER,
     pass: process.env.MAILPASSWORD,
   },
 })
 
-exports.handler = async function (event: { body: string }, context: any) {
+export default defineEventHandler(async (event, response) => {
   try {
-    // Check if 'event.body' is defined
-    if (!event.body) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: 'Missing request body' }),
-      }
-    }
-    const body = JSON.parse(event.body)
+    const body = await readBody(event)
 
     const mail = await transporter.sendMail({
       from: process.env.CONTACTMAIL,
@@ -101,11 +86,11 @@ exports.handler = async function (event: { body: string }, context: any) {
   } catch (error) {
     console.error(error)
     return {
-      statusCode: 500,
+      statusCode: 500, // Or any other appropriate error code
       body: JSON.stringify({ message: 'Error sending email' }),
     }
   }
-}
+})
 
 // Configure the contact endpoint path
 export const config = {
