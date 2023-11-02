@@ -149,7 +149,7 @@ const onSubmit = handleSubmit(
 
     try {
       // Make an HTTP POST request to the server-side endpoint
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
