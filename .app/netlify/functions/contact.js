@@ -16,8 +16,8 @@ export default defineEventHandler(async (event, response) => {
     const body = await readBody(event)
 
     const mail = await transporter.sendMail({
-      from: config.CONTACTMAIL,
-      to: config.CONTACTMAIL,
+      from: 'timo@skillhub.ee',
+      to: 'timo@skillhub.ee',
       subject: body.subject,
       text: body.message,
       html: `
