@@ -37,33 +37,33 @@ export default defineNuxtConfig({
 
   pwa: {
     manifest: {
-      name: "SkillHub",
-      short_name: "SkillHub",
-      description: "Delivering verified skills to Companies",
-      theme_color: "#000000",
+      name: 'SkillHub',
+      short_name: 'SkillHub',
+      description: 'Delivering verified skills to Companies',
+      theme_color: '#000000',
       icons: [
         {
-          src: "pwa-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
         },
         {
-          src: "pwa-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
         },
       ],
     },
     devOptions: {
       enabled: true,
-      type: "module",
+      type: 'module',
     },
   },
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-    }
+    },
   },
 
   /**
@@ -136,22 +136,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", '@vite-pwa/nuxt', '@pinia/nuxt', 'nuxt-gtag', 'nuxt-aos' ],
+  modules: [
+    '@nuxt/image',
+    '@vite-pwa/nuxt',
+    '@pinia/nuxt',
+    'nuxt-gtag',
+    'nuxt-aos',
+  ],
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
   gtag: {
-    id: 'G-H72N63BVW3'
+    id: 'G-H72N63BVW3',
   },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-     cssnano:
-       process.env.NODE_ENV === 'production'
-         ? { preset: ['default', { discardComments: { removeAll: true } }] }
-         : false, // disable cssnano when not in production
-    },
- }
 })
