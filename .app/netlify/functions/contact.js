@@ -60,7 +60,7 @@ export default defineEventHandler(async (event, response) => {
     <div class="email-container">
         <div class="header">New Contact Form Submission</div>
         <div class="content">
-            <p><strong>Name:</strong> ${body.name}</p>
+            <p><strong>Name blabla :</strong> ${body.name}</p>
             <p><strong>Email:</strong> ${body.email}</p>
             <p><strong>Message:</strong></p>
             <p>${body.message}</p>
