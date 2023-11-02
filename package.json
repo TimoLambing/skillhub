@@ -83,6 +83,7 @@
     "@nuxt/devtools": "^1.0.0",
     "@nuxt/image": "^1.0.0",
     "@rollup/plugin-terser": "^0.4.4",
+    "@types/nodemailer": "^6.4.13",
     "ipx": "^2.0.0",
     "netlify-cli": "^16.9.3",
     "nodemailer": "^6.9.7"
