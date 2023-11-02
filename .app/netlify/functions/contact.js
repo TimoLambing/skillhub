@@ -1,13 +1,13 @@
 import nodemailer from 'nodemailer'
 
-const endpointConfig = useRuntimeConfig()
+// const endpointConfig = useRuntimeConfig()
 
 const transporter = nodemailer.createTransport({
-  host: endpointConfig.MAILHOST,
-  port: endpointConfig.MAILPORT,
+  host: process.env.MAILHOST,
+  port: process.env.MAILPORT,
   auth: {
-    user: endpointConfig.MAILUSER,
-    pass: endpointConfig.MAILPASSWORD,
+    user: process.env.MAILUSER,
+    pass: process.env.MAILPASSWORD,
   },
 })
 
@@ -16,8 +16,8 @@ export default defineEventHandler(async (event, response) => {
     const body = await readBody(event)
 
     const mail = await transporter.sendMail({
-      from: endpointConfig.CONTACTMAIL,
-      to: endpointConfig.CONTACTMAIL,
+      from: process.env.CONTACTMAIL,
+      to: process.env.CONTACTMAIL,
       subject: body.subject,
       text: body.message,
       html: `
