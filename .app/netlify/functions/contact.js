@@ -1,7 +1,8 @@
 import nodemailer from 'nodemailer'
 
 export default {
-  sendEmail(to, subject, body) {
+  sendEmail(to, subject, text) {
+    // Change "body" to "text"
     const transporter = nodemailer.createTransport({
       host: process.env.MAILHOST,
       port: process.env.MAILPORT,
@@ -15,7 +16,7 @@ export default {
     const mailOptions = {
       to: to,
       subject: subject,
-      body: body,
+      text: text, // Change "body" to "text"
     }
 
     return transporter.sendMail(mailOptions)
