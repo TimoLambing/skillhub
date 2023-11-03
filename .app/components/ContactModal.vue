@@ -63,14 +63,7 @@
           </div>
 
           <div class="col-span-12">
-            <BaseButton
-              type="submit"
-              class="w-full"
-              color="primary"
-              :disabled="isSubmitting"
-              :loading="isSubmitting"
-              >Send Message</BaseButton
-            >
+            <BaseButton type="submit" class="w-full" color="primary" :disabled="isSubmitting" :loading="isSubmitting">Send Message</BaseButton>
           </div>
         </div>
       </form>
@@ -79,15 +72,14 @@
 </template>
 
 <script setup lang="ts">
+import Mail from "@/netlify/functions/contact";
 import { toTypedSchema } from '@vee-validate/zod'
 import { Field, useForm } from 'vee-validate'
 import { z } from 'zod'
 
-const emit = defineEmits(['close-modal']);  // Define close-modal event here
-
+const emit = defineEmits(['close-modal']); // Define close-modal event here
 const showModal = ref(true)
 
-// This is the object that will contain the validation messages
 const VALIDATION_TEXT = {
   FIRSTNAME_REQUIRED: "First name can't be empty",
   LASTNAME_REQUIRED: "Last name can't be empty",
@@ -95,8 +87,6 @@ const VALIDATION_TEXT = {
   MESSAGE_REQUIRED: "Message can't be empty",
 }
 
-// This is the Zod schema for the form input
-// It's used to define the shape that the form data will have
 const zodSchema = z.object({
   firstName: z.string().min(1, VALIDATION_TEXT.FIRSTNAME_REQUIRED),
   lastName: z.string().min(1, VALIDATION_TEXT.LASTNAME_REQUIRED),
@@ -104,8 +94,6 @@ const zodSchema = z.object({
   message: z.string().min(1, VALIDATION_TEXT.MESSAGE_REQUIRED),
 })
 
-// Zod has a great infer method that will
-// infer the shape of the schema into a TypeScript type
 type FormInput = z.infer<typeof zodSchema>
 
 const validationSchema = toTypedSchema(zodSchema)
@@ -124,7 +112,6 @@ const {
   values,
   errors,
   resetForm,
-  setFieldValue,
   setErrors,
 } = useForm({
   validationSchema,
@@ -133,7 +120,6 @@ const {
 
 const success = ref(false)
 
-// Ask the user for confirmation before leaving the page if the form has unsaved changes
 onBeforeRouteLeave(() => {
   if (meta.value.dirty) {
     return confirm('You have unsaved changes. Are you sure you want to leave?')
@@ -142,27 +128,41 @@ onBeforeRouteLeave(() => {
 
 const toaster = useToaster()
 
-// This is where you would send the form data to the server
+async function submitContactForm() {
+  const { firstName, lastName, email, message } = values;
+
+  const response = await Mail.sendEmail(email, "Contact Form Submission", `
+    Name: ${firstName} ${lastName}
+    Email: ${email}
+    Message: ${message}
+  `);
+
+  if (response.ok) {
+    success.value = true;
+  } else {
+    setErrors(response.errors); // Update validation errors based on the response
+    success.value = false;
+  }
+}
+
 const onSubmit = handleSubmit(
-  async (values) => {
-    success.value = false
+  async (formValues) => {
+    success.value = false;
 
     try {
-      // Make an HTTP POST request to the server-side endpoint
       const response = await fetch('/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: `${values.firstName} ${values.lastName}`,
-          email: values.email,
+          name: `${formValues.firstName} ${formValues.lastName}`,
+          email: formValues.email,
           subject: 'Contact Form Submission',
-          message: values.message,
+          message: formValues.message,
         }),
-      })
+      });
 
-      // Check if the response status is OK (status code 200)
       if (response.ok) {
         toaster.clearAll()
         toaster.show({
@@ -175,7 +175,6 @@ const onSubmit = handleSubmit(
 
         emit('close-modal')
       } else {
-        // Handle non-successful response here (e.g., show an error toaster)
         console.error('Server responded with status', response.status);
         toaster.clearAll()
         toaster.show({
@@ -186,13 +185,10 @@ const onSubmit = handleSubmit(
           closable: true,
         })
       }
-
     } catch (error: any) {
       console.error(error);
-      // this will set the error on the form
       if (error.message === 'Fake backend validation error') {
         setFieldError('firstName', 'This name is not allowed')
-
         document.documentElement.scrollTo({
           top: 0,
           behavior: 'smooth',
@@ -223,13 +219,8 @@ const onSubmit = handleSubmit(
     }, 3000)
   },
   (error) => {
-    // this callback is optional and called only if the form has errors
     success.value = false
-
-    // here you have access to the error
     console.log('message-send-error', error)
-
-    // you can use it to scroll to the first error
     document.documentElement.scrollTo({
       top: 0,
       behavior: 'smooth',

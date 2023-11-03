@@ -1,5 +1,29 @@
 import nodemailer from 'nodemailer'
 
+export default {
+  sendEmail(to, subject, body) {
+    const transporter = nodemailer.createTransport({
+      host: process.env.MAILHOST,
+      port: process.env.MAILPORT,
+      secure: false,
+      auth: {
+        user: process.env.MAILUSER,
+        pass: process.env.MAILPASS,
+      },
+    })
+
+    const mailOptions = {
+      to: to,
+      subject: subject,
+      body: body,
+    }
+
+    return transporter.sendMail(mailOptions)
+  },
+}
+
+/* import nodemailer from 'nodemailer'
+
 // const endpointConfig = useRuntimeConfig()
 
 const transporter = nodemailer.createTransport({
@@ -79,7 +103,7 @@ export default defineEventHandler(async (event, response) => {
       }
 }) */
 
-    return {
+/*return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
     }
@@ -90,7 +114,7 @@ export default defineEventHandler(async (event, response) => {
       body: JSON.stringify({ message: 'Error sending email' }),
     }
   }
-})
+}) */
 
 // Configure the contact endpoint path
 export const config = {
