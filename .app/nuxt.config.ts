@@ -96,15 +96,11 @@ export default defineNuxtConfig({
 
   // nuxt behavior configuration
   runtimeConfig: {
-    mail: {
-      host: process.env.MAILHOST,
-      port: process.env.MAILPORT,
-      auth: {
-        user: process.env.MAILUSER,
-        pass: process.env.MAILPASS,
-      },
-      from: process.env.MAILFROM,
-    },
+    MAILHOST: process.env.MAILHOST,
+    MAILPORT: process.env.MAILPORT,
+    MAILUSER: process.env.MAILUSER,
+    MAILPASSWORD: process.env.MAILPASSWORD,
+    CONTACTMAIL: process.env.CONTACTMAIL,
     public: {
       // mapbox config
       mapboxToken: process.env.NUXT_PUBLIC_MAPBOX_TOKEN,
