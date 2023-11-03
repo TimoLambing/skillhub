@@ -1,19 +1,21 @@
 import nodemailer from 'nodemailer'
 
+// const endpointConfig = useRuntimeConfig()
+
 const transporter = nodemailer.createTransport({
-  host: 'smtp.zoho.eu',
-  port: 587, // Ensure it's an integer
+  host: process.env.MAILHOST,
+  port: process.env.MAILPORT,
   auth: {
     user: process.env.MAILUSER,
     pass: process.env.MAILPASSWORD,
   },
 })
 
-exports.handler = function (event, context) {
+export default defineEventHandler(async (event, response) => {
   try {
-    const body = JSON.parse(event.body)
+    const body = await readBody(event)
 
-    transporter.sendMail({
+    const mail = await transporter.sendMail({
       from: process.env.CONTACTMAIL,
       to: process.env.CONTACTMAIL,
       subject: body.subject,
@@ -88,7 +90,7 @@ exports.handler = function (event, context) {
       body: JSON.stringify({ message: 'Error sending email' }),
     }
   }
-}
+})
 
 // Configure the contact endpoint path
 export const config = {
