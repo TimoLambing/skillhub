@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-exports.handler = function (event: { body: string }, context: any) {
+exports.handler = function (event, context) {
   try {
     const body = JSON.parse(event.body)
 
