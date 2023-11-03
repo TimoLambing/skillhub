@@ -1,27 +1,23 @@
-import * as nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer'
 
 // const endpointConfig = useRuntimeConfig()
 
-export const config = {
-  path: '/contact',
-}
+const transporter = nodemailer.createTransport({
+  host: process.env.MAILHOST,
+  port: process.env.MAILPORT,
+  auth: {
+    user: process.env.MAILUSER,
+    pass: process.env.MAILPASS,
+  },
+})
 
-export async function sendEmail({ event, response }) {
-  const transporter = nodemailer.createTransport({
-    host: process.env.MAILHOST,
-    port: process.env.MAILPORT,
-    auth: {
-      user: process.env.MAILUSER,
-      pass: process.env.MAILPASSWORD,
-    },
-  })
-
+export default defineEventHandler(async (event, response) => {
   try {
     const body = await readBody(event)
 
     const mail = await transporter.sendMail({
-      from: process.env.CONTACTMAIL,
-      to: process.env.CONTACTMAIL,
+      from: process.env.MAILFROM,
+      to: process.env.MAILFROM,
       subject: body.subject,
       text: body.message,
       html: `
@@ -77,13 +73,20 @@ export async function sendEmail({ event, response }) {
 </html>`,
     })
 
-    /* return 'Saadetud';
-      } catch (error) {
-        sendError(event, createError({ statusCode: 400, statusMessage: error.message }))
-      }
-}) */
+    return 'Saadetud'
+  } catch (error) {
+    sendError(
+      event,
+      createError({ statusCode: 400, statusMessage: error.message }),
+    )
+  }
+})
 
-    return {
+export const config = {
+  path: '/contact',
+}
+
+/*return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
     }
@@ -94,4 +97,4 @@ export async function sendEmail({ event, response }) {
       body: JSON.stringify({ message: 'Error sending email' }),
     }
   }
-}
+}) */
