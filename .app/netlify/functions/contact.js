@@ -21,7 +21,7 @@ export default async function handleContactFormSubmission(event, response) {
     const body = await readBody(event)
 
     if (body && body.message) {
-      const mail = transporter.sendMail({
+      const mail = await transporter.sendMail({
         from: process.env.MAILFROM,
         to: process.env.MAILFROM,
         subject: body.subject,
