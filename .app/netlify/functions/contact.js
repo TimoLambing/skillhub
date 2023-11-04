@@ -2,6 +2,11 @@ import nodemailer from 'nodemailer'
 
 // const endpointConfig = useRuntimeConfig()
 
+// Configure the contact endpoint path
+export const config = {
+  path: '/contact',
+}
+
 const transporter = nodemailer.createTransport({
   host: process.env.MAILHOST,
   port: process.env.MAILPORT,
@@ -11,16 +16,17 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-export default defineEventHandler(async (event, response) => {
+export default async function handleContactFormSubmission(event, response) {
   try {
     const body = await readBody(event)
 
-    const mail = await transporter.sendMail({
-      from: process.env.MAILFROM,
-      to: process.env.MAILFROM,
-      subject: body.subject,
-      text: body.message,
-      html: `
+    if (body && body.message) {
+      const mail = transporter.sendMail({
+        from: process.env.MAILFROM,
+        to: process.env.MAILFROM,
+        subject: body.subject,
+        text: body.message,
+        html: `
               <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +66,7 @@ export default defineEventHandler(async (event, response) => {
     <div class="email-container">
         <div class="header">New Contact Form Submission</div>
         <div class="content">
-            <p><strong>Name blabla :</strong> ${body.name}</p>
+            <p><strong>Name:</strong> ${body.name}</p>
             <p><strong>Email:</strong> ${body.email}</p>
             <p><strong>Message:</strong></p>
             <p>${body.message}</p>
@@ -71,7 +77,25 @@ export default defineEventHandler(async (event, response) => {
     </div>
 </body>
 </html>`,
-    })
+      })
+
+      return 'Saadetud'
+    }
+  } catch (error) {
+    sendError(event, response, error)
+  }
+}
+
+function sendError(event, response, error) {
+  response.statusCode = 500
+  response.body = JSON.stringify({ message: error.message })
+  return response
+}
+
+function createError(statusCode, statusMessage) {
+  return new Error(statusMessage)
+}
+/* })
 
     return 'Saadetud'
   } catch (error) {
@@ -80,21 +104,27 @@ export default defineEventHandler(async (event, response) => {
       createError({ statusCode: 400, statusMessage: error.message }),
     )
   }
-})
-
-export const config = {
-  path: '/contact',
 }
 
-/*return {
+function sendError(event, response, error) {
+  response.statusCode = 500
+  response.body = JSON.stringify({ message: error.message })
+  return response
+}
+
+function createError(statusCode, statusMessage) {
+  return new Error(statusMessage)
+}
+
+  return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
-    }
-  } catch (error) {
-    console.error(error)
+    };
+    } catch (error) {
+    console.error(error);
     return {
       statusCode: 500, // Or any other appropriate error code
       body: JSON.stringify({ message: 'Error sending email' }),
-    }
+    };
   }
-}) */
+}); */
