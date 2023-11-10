@@ -143,24 +143,22 @@ onBeforeRouteLeave(() => {
 const toaster = useToaster()
 
 // This is where you would send the form data to the server
-const onSubmit = handleSubmit(
-  async (values) => {
-    success.value = false
+const onSubmit = handleSubmit(async (values) => {
+  success.value = false;
 
-    try {
-      // Make an HTTP POST request to the server-side endpoint
-      const response = await fetch('/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: `${values.firstName} ${values.lastName}`,
-          email: values.email,
-          subject: 'Contact Form Submission',
-          message: values.message,
-        }),
-      })
+  try {
+    const response = await fetch('/.netlify/functions/sendMail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: `${values.firstName} ${values.lastName}`,
+        email: values.email,
+        subject: 'Contact Form Submission',
+        message: values.message,
+      }),
+    });
 
       // Check if the response status is OK (status code 200)
       if (response.ok) {

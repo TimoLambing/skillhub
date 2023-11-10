@@ -1,4 +1,39 @@
-import nodemailer from 'nodemailer'
+const nodemailer = require('nodemailer')
+
+exports.handler = async (event) => {
+  const { name, email, subject, message } = JSON.parse(event.body)
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.MAILHOST,
+    port: process.env.MAILPORT,
+    auth: {
+      user: process.env.MAILUSER,
+      pass: process.env.MAILPASS,
+    },
+  })
+
+  const mailOptions = {
+    from: 'timo@skillhub.ee',
+    to: email,
+    subject: subject,
+    text: message,
+  }
+
+  try {
+    await transporter.sendMail(mailOptions)
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Email sent' }),
+    }
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to send email' }),
+    }
+  }
+}
+
+/* import nodemailer from 'nodemailer'
 
 // const endpointConfig = useRuntimeConfig()
 
