@@ -35,6 +35,7 @@ exports.handler = async (event) => {
             margin: auto;
             padding: 20px;
             width: 80%;
+            height: 80%;
             background-color: #fff;
             border-radius: 8px;
         }
@@ -55,15 +56,15 @@ exports.handler = async (event) => {
 </head>
 <body>
     <div class="email-container">
-        <div class="header">New Contact Form Submission</div>
+        <div class="header">SkillHub Investment Form Submission</div>
         <div class="content">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
+            <p>Name: <strong>${name}</strong></p>
+            <p><strong>Email: ${email}</strong></p>
             <p><strong>Message:</strong></p>
             <p>${message}</p>
         </div>
         <div class="footer">
-            This email was sent from your website's contact form.
+            This email was sent from SkillHub contact form.
         </div>
     </div>
 </body>
