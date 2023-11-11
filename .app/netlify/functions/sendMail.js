@@ -1,5 +1,9 @@
 const nodemailer = require('nodemailer')
 
+export const config = {
+  path: '/sendMail',
+}
+
 exports.handler = async (event) => {
   const { name, email, subject, message } = JSON.parse(event.body)
 
@@ -33,29 +37,7 @@ exports.handler = async (event) => {
   }
 }
 
-export const config = {
-  path: '/sendMail',
-}
-
-/* import nodemailer from 'nodemailer'
-
-// const endpointConfig = useRuntimeConfig()
-
-// Configure the contact endpoint path
-export const config = {
-  path: '/contact',
-}
-
-const transporter = nodemailer.createTransport({
-  host: process.env.MAILHOST,
-  port: process.env.MAILPORT,
-  auth: {
-    user: process.env.MAILUSER,
-    pass: process.env.MAILPASS,
-  },
-})
-
-export default async function handleContactFormSubmission(event, response) {
+/* export default async function handleContactFormSubmission(event, response) {
   try {
     const body = await readBody(event)
 
