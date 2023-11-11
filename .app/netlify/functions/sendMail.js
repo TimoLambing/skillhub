@@ -1,9 +1,5 @@
 const nodemailer = require('nodemailer')
 
-export const config = {
-  path: '/sendMail',
-}
-
 exports.handler = async (event) => {
   const { name, email, subject, message } = JSON.parse(event.body)
 

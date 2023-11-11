@@ -147,7 +147,7 @@ const onSubmit = handleSubmit(async (values) => {
   success.value = false;
 
   try {
-    const response = await fetch('/sendMail', {
+    const response = await fetch('/.netlify/functions/sendMail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
