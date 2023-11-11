@@ -18,57 +18,65 @@ exports.handler = async (event) => {
     subject: subject,
     text: message,
     html: `
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form Submission</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .email-container {
-            margin: auto;
-            padding: 20px;
-            width: 80%;
-            height: 80%;
-            background-color: #fff;
-            border-radius: 8px;
-        }
-        .header {
-            font-size: 24px;
-            margin-bottom: 20px;
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form Submission</title>
+        <style>
+          body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-        }
-        .content {
-            margin-bottom: 20px;
-            color: #555;
-        }
-        .footer {
+            margin: 0;
+            padding: 20px;
+          }
+          .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          .email-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+          }
+          .email-content {
+            padding: 20px;
+            line-height: 1.5;
+          }
+          .email-footer {
+            background-color: #f2f2f2;
+            color: #888888;
+            text-align: center;
+            padding: 10px 20px;
             font-size: 12px;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-    <div class="email-container">
-        <div class="header">SkillHub Investment Form Submission</div>
-        <div class="content">
-            <p>Name: <strong>${name}</strong></p>
-            <p><strong>Email: ${email}</strong></p>
+          }
+        </style>
+      </head>
+      <body>
+        <div class="email-container">
+          <div class="email-header">
+            New Contact Form Submission
+          </div>
+          <div class="email-content">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
             <p><strong>Message:</strong></p>
             <p>${message}</p>
+          </div>
+          <div class="email-footer">
+            This email was sent from the SkillHub contact form.
+          </div>
         </div>
-        <div class="footer">
-            This email was sent from SkillHub contact form.
-        </div>
-    </div>
-</body>
-</html>`,
+      </body>
+      </html>`,
   }
 
   try {
