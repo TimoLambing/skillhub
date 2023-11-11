@@ -13,8 +13,8 @@ exports.handler = async (event) => {
   })
 
   const mailOptions = {
-    from: 'timo@skillhub.ee',
-    to: 'timo@skillhub.ee',
+    from: process.env.MAILFROM,
+    to: process.env.MAILFROM,
     subject: subject,
     text: message,
     html: `
@@ -42,7 +42,7 @@ exports.handler = async (event) => {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           }
           .email-header {
-            background-color: #4CAF50;
+            background-color: #22acd3;
             color: white;
             padding: 20px;
             text-align: center;
@@ -63,7 +63,7 @@ exports.handler = async (event) => {
       <body>
         <div class="email-container">
           <div class="email-header">
-            New Contact Form Submission
+            Skillhub Investment Form Submission
           </div>
           <div class="email-content">
             <p><strong>Name:</strong> ${name}</p>
