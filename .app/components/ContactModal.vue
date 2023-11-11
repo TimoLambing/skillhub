@@ -147,7 +147,7 @@ const onSubmit = handleSubmit(async (values) => {
   success.value = false;
 
   try {
-    const response = await fetch('/.netlify/functions/sendMail', {
+    const response = await fetch('/sendMail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ const onSubmit = handleSubmit(async (values) => {
       body: JSON.stringify({
         name: `${values.firstName} ${values.lastName}`,
         email: values.email,
-        subject: 'Contact Form Submission',
+        subject: 'Keegi kirjutas sulle Skillhubis',
         message: values.message,
       }),
     });

@@ -33,6 +33,10 @@ exports.handler = async (event) => {
   }
 }
 
+export const config = {
+  path: '/sendMail',
+}
+
 /* import nodemailer from 'nodemailer'
 
 // const endpointConfig = useRuntimeConfig()
