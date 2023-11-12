@@ -50,6 +50,10 @@ const props = withDefaults(
   },
 )
 
+const closeModal = () => {
+  emit('close');
+};
+
 const emit = defineEmits(['close'])
 
 const dialogClasses = computed(() => {
@@ -131,21 +135,7 @@ const dialogClasses = computed(() => {
                 class="dark:bg-muted-800 w-full bg-white text-left align-middle shadow-xl transition-all"
                 :class="dialogClasses"
               >
-                <slot name="header"></slot>
-
-                <slot></slot>
-
-                <div
-                  v-if="'footer' in $slots"
-                  class="flex w-full items-center gap-x-2"
-                  :class="[
-                    props.footerAlign === 'center' && 'justify-center',
-                    props.footerAlign === 'end' && 'justify-end',
-                    props.footerAlign === 'between' && 'justify-between',
-                  ]"
-                >
-                  <slot name="footer"></slot>
-                </div>
+                <InvestmentModal  @close-modal="closeModal" />
               </DialogPanel>
             </TransitionChild>
           </div>

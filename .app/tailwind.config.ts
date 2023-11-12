@@ -73,6 +73,7 @@ export default withShurikenUI({
           900: 'rgb(var(--color-primary-900) / <alpha-value>)',
           950: 'rgb(var(--color-primary-950) / <alpha-value>)',
         },
+        /*
         muted: {
           50: 'rgb(var(--color-muted-50) / <alpha-value>)',
           100: 'rgb(var(--color-muted-100) / <alpha-value>)',
@@ -85,7 +86,7 @@ export default withShurikenUI({
           800: 'rgb(var(--color-muted-800) / <alpha-value>)',
           900: 'rgb(var(--color-muted-900) / <alpha-value>)',
           950: 'rgb(var(--color-muted-950) / <alpha-value>)',
-        },
+        }, */
         shakespeare: {
           50: 'rgb(var(--shakespeare-50) / <alpha-value>)',
           100: 'rgb(var(--shakespeare-100) / <alpha-value>)',

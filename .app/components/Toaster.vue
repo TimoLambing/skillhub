@@ -42,7 +42,7 @@
     </BaseCard>
   </transition>
 
-  <TairoModal :open="isModalOpen" size="3xl" @close="closeModal" />
+  <TairoModalInvestment :open="isModalOpen" size="3xl" @close="closeModal" />
 </template>
 
 <script lang="ts">

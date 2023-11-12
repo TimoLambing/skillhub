@@ -3,11 +3,11 @@
 definePageMeta({
   // static meta information can be added to vue-router, we use it
   // to generate the search index in the demo
-  title: 'My first page',
+  title: 'AI recruiter',
   description:
-    'Nuxt & Tailwind CSS dashboard system template that comes with 100+ prebuilt pages and 40+ custom UI components.',
+  'We got the Skills your company needs',
   breadcrumb: {
-    label: 'Tairo',
+    label: 'SkillHub',
   },
   layout: 'landing'
 })
@@ -15,7 +15,7 @@ definePageMeta({
 // meta information can also be added to the head
 useHead({
   meta: [
-    { name: 'description', content: 'My amazing site.' }
+    { name: 'description', content: 'AI recruiter' }
   ],
   bodyAttrs: {
     class: 'test'

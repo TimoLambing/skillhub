@@ -6,7 +6,10 @@ import {
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+  },
   extends: [
     /**
      * This extends the base Tairo layer.
