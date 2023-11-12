@@ -35,37 +35,42 @@ const { open } = usePanels()
         ]"
       >
       <NuxtLink
-          to="/documentation"
+          to="#corporate"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="1500"
+          @click="isMobileOpen = false"
         >
           Recruiters
         </NuxtLink>
         <NuxtLink
-          to="/documentation"
+          to="#talents"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="1200"
+          @click="isMobileOpen = false"
         >
           Talents
         </NuxtLink>
         <NuxtLink
-          to="/documentation"
+          to="#"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="900"
+          @click="isMobileOpen = false"
         >
           About
         </NuxtLink>
         <NuxtLink
-          to="/documentation"
+          to="#"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="600"
+          @click="isMobileOpen = false"
         >
           Contact
         </NuxtLink>
         <NuxtLink
-          to="/documentation"
+          to="#"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="300"
+          @click="isMobileOpen = false"
         >
           Articles
         </NuxtLink>
@@ -75,6 +80,7 @@ const { open } = usePanels()
             <BaseButtonAction
               shape="full"
               color="muted"
+              @click="isMobileOpen = false"
             >
               Login
             </BaseButtonAction>
@@ -117,7 +123,8 @@ const { open } = usePanels()
         </div>
       </div>
       <div class="flex-grow flex items-center justify-end gap-4 md:w-1/5">
-        <button
+        <!--
+          <button
           type="button"
           class="border-muted-200 hover:ring-muted-200 dark:hover:ring-muted-700 dark:border-muted-700 dark:bg-muted-800 dark:ring-offset-muted-900 flex h-9 w-9 items-center justify-center rounded-full border bg-white ring-1 ring-transparent transition-all duration-300 hover:ring-offset-4"
           @click="
@@ -131,7 +138,7 @@ const { open } = usePanels()
             name="ph:drop-half-bottom-duotone"
             class="text-muted-400 h-5 w-5"
           />
-        </button>
+        </button>-->
         <!-- <BaseThemeToggle aria-label="Toggle darkmode" /> -->
         <!-- Visible only on large screens -->
           <NuxtLink to="/auth" class="hidden lg:flex">

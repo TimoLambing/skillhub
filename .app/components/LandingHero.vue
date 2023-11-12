@@ -145,7 +145,7 @@ function useGaugePersonal() {
         </div>
       </div>
       <Toaster />
-      <div class="relative z-30 pt-32 text-center">
+      <div class="relative z-30 pt-32 text-center" id="corporate">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
           >Corporate</BaseText>
@@ -389,7 +389,7 @@ function useGaugePersonal() {
       </fieldset>
 
       <div class="mx-auto w-full max-w-4xl px-4 items-center justify-center">
-        <div class="z-30 pt-32 text-center items-center justify-center">
+        <div class="z-30 pt-32 text-center items-center justify-center" id="talents">
           <BaseText
             class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
             >talent</BaseText
