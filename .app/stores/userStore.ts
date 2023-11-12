@@ -11,7 +11,7 @@ export const useUserStore = defineStore('users', () => {
     lastName: '',
     occupation: '',
     email: '',
-    avatarPath: ''
+    avatarPath: '',
   })
 
   const token = ref()
@@ -19,13 +19,13 @@ export const useUserStore = defineStore('users', () => {
   const home = ref({
     appDownloaded: false,
     rememberMe: false,
-    theme: 'light'
+    theme: 'dark',
   })
 
   const checkAuth = async () => {
     // Mocking the authentication check
-    user.value.auth = true;
-    return true;
+    user.value.auth = true
+    return true
   }
 
   return { user, token, checkAuth, home }

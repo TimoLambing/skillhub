@@ -132,7 +132,7 @@ const { open } = usePanels()
             class="text-muted-400 h-5 w-5"
           />
         </button>
-        <BaseThemeToggle aria-label="Toggle darkmode" />
+        <!-- <BaseThemeToggle aria-label="Toggle darkmode" /> -->
         <!-- Visible only on large screens -->
           <NuxtLink to="/auth" class="hidden lg:flex">
             <BaseButtonAction shape="full" color="muted">Login</BaseButtonAction>
