@@ -1,10 +1,10 @@
 <template>
   <div
-    class="ltablet:gap-y-0 relative z-30 mt-32 grid grid-cols-12 gap-y-8 overflow-hidden sm:w-full sm:gap-x-16 lg:gap-y-0"
+    class="ltablet:gap-y-0 relative z-30 grid grid-cols-12 gap-y-8 overflow-hidden sm:w-full sm:gap-x-16 lg:gap-y-0  bg-gradient-to-b from-muted-900 to-primary-900"
   >
     <div class="col-span-12">
       <div class="mx-auto flex h-full w-full max-w-xl flex-col justify-center">
-        <div class="text-center">
+        <div data-aos="zoom-in" data-aos-duration="900" class="text-center">
           <BaseText
             class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
             >compatibility</BaseText

@@ -388,30 +388,74 @@ function useGaugePersonal() {
         </div>
       </fieldset>
 
-      <div class="mx-auto w-full max-w-4xl px-4 items-center justify-center">
-        <div class="z-30 pt-32 text-center items-center justify-center" id="talents">
-          <BaseText
-            class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
-            >talent</BaseText
-          >
-          <BaseHeading
-            as="h2"
-            size="4xl"
+      <div data-aos="zoom-in" data-aos-duration="900" class="mx-auto w-full max-w-4xl px-4 items-center justify-center">
+          <div class="flex flex-col items-center justify-center text-center pt-32">
+            <!-- Talent Heading -->
+            <BaseText
+              class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
+            >
+              Talent
+            </BaseText>
+            <BaseHeading
+              as="h2"
+              size="4xl"
+              weight="light"
+              lead="tight"
+              class="text-muted-800 mx-auto mb-4 dark:text-white"
+            >
+              Get verified and land a <span class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4">Job</span>
+            </BaseHeading>
+            <BaseParagraph
+              size="lg"
+              class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
+            >
+              Join Skillhub, where our team works with AI to match your unique skills with exciting job opportunities. SkillHub provides a comprehensive suite of features including earnings, forecasts, contracts, payments, and detailed project and employer information.
+            </BaseParagraph>
+
+            <!-- Badges and Heading Container -->
+            <div class="flex items-center justify-center gap-4 mt-4 border-[1px] border border-white rounded-full">
+              <!-- Verified Badge -->
+              <img src="/img/verified.png" alt="Verified Badge" class="h-12 w-12" />
+
+
+              <!-- Verified Heading -->
+              <BaseHeading
+              as="h1"
+              size="xl"
+              weight="light"
+              lead="tight"
+              class="text-muted-800 xs:!text-4xl mx-auto dark:text-white"
+              >
+              Verified
+            </BaseHeading>
+
+            <!-- Specialist Badge -->
+            <div class="bg-dark-500 p-4">
+              <span class="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
+                <span aria-hidden class="absolute inset-0 bg-gray-200 opacity-50 rounded-full"></span>
+                <span class="relative">Specialist</span>
+                <span class="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div data-aos="zoom-in" data-aos-duration="900" class="flex flex-col w-full justify-center mx-auto">
+          <div class="w-full text-center">
+            <BaseHeading
+            as="h1"
+            size="3xl"
             weight="light"
             lead="tight"
-            class="text-muted-800 mx-auto mb-4 dark:text-white"
+            class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white mt-20"
           >
-          Get verified, land a job
+            This will be your intuitive
+            <span
+              class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
+              >App</span
+            >
           </BaseHeading>
-          <BaseParagraph
-            size="lg"
-            class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
-          >
-          Join Skillhub, where our team works with AI to match your unique skills with exciting job opportunities. SkillHub provides a comprehensive suite of features including earnings, forecasts, contracts, payments, and detailed project and employer information.
-          </BaseParagraph>
-        </div>
-        <div class="flex w-full justify-center mx-auto">
-          <img src="/img/mobile/mobile-banner.png" loading="lazy" alt="Mobile phone mockup" />
+          </div>
+          <img src="/img/landing_phone_mockup.webp" loading="lazy" alt="Mobile phone mockup" />
         </div>
       </div>
     </div>
