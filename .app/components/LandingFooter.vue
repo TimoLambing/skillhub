@@ -7,18 +7,10 @@ const year = new Date().getFullYear()
     class="dark:bg-muted-900 border-muted-200 dark:border-muted-700 relative border-t bg-white"
   >
     <NuxtLink
-      to="https://cssninja.io"
+      to="/"
       class="dark:bg-muted-900 absolute inset-x-0 -top-4 mx-auto flex h-9 w-14 items-center justify-center bg-white"
     >
-      <img
-        class="h-7 w-7"
-        src="/img/logos/cssninja-logo-icon.svg"
-        alt="Css Ninja logo"
-        height="28"
-        width="28"
-        loading="lazy"
-        decoding="async"
-      />
+      <TairoLogo />
     </NuxtLink>
     <div
       class="ltablet:flex-row mx-auto flex max-w-7xl flex-col items-center justify-between px-6 py-8 lg:flex-row"
@@ -36,10 +28,10 @@ const year = new Date().getFullYear()
         class="ltablet:mt-0 ltablet:gap-6 mt-6 flex flex-wrap items-center justify-center gap-4 lg:mt-0 lg:gap-6"
       >
         <NuxtLink
-          to="/demos"
+          to="#"
           class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
         >
-          Demo pages
+          Demo features
         </NuxtLink>
 
         <NuxtLink
@@ -49,15 +41,15 @@ const year = new Date().getFullYear()
           Documentation
         </NuxtLink>
         <NuxtLink
-          to="https://github.com/shuriken-ui"
+          to="#"
           target="_blank"
           rel="noopener"
           class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
         >
-          Shuriken UI
+          Investing
         </NuxtLink>
         <NuxtLink
-          to="https://cssninja.io/faq/support"
+          to="#"
           target="_blank"
           rel="noopener"
           class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
@@ -71,14 +63,14 @@ const year = new Date().getFullYear()
         <span>
           ©
           <NuxtLink
-            to="https://cssninja.io"
+            to="#"
             target="_blank"
             rel="noopener"
             class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
           >
-            Css Ninja
+            SkillHub
           </NuxtLink>
-          2018-{{ year }}.
+          {{ year }}.
         </span>
       </div>
     </div>

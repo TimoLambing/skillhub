@@ -120,7 +120,7 @@ const filteredDemos = computed(() => {
       <div class="mb-16 max-w-2xl">
         <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
-          >Platform specifics</BaseText
+          >Product roadmap</BaseText
         >
         <BaseHeading
           as="h2"
@@ -190,7 +190,7 @@ const filteredDemos = computed(() => {
             </template>
           </div>
 
-          <div v-if="props.cta" class="mt-24 flex items-center justify-center">
+          <!--<div v-if="props.cta" class="mt-24 flex items-center justify-center">
             <BaseButton
               shape="curved"
               color="primary"
@@ -198,7 +198,7 @@ const filteredDemos = computed(() => {
               to="/demos"
               >View All {{ demoPages.length }} Demos</BaseButton
             >
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

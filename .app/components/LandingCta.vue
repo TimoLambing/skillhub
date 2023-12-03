@@ -1,7 +1,7 @@
 <template>
   <div class="dark:bg-muted-900 bg-white py-24">
     <div class="mx-auto w-full max-w-7xl px-4">
-      <div class="mx-auto w-full max-w-6xl">
+      <div data-aos="zoom-in" class="mx-auto w-full max-w-6xl">
         <div
           class="bg-primary-900 dark:bg-primary-900/40 ltablet:grid ltablet:grid-cols-2 ltablet:gap-4 overflow-hidden rounded-3xl shadow-xl lg:grid lg:grid-cols-2 lg:gap-4"
         >
@@ -11,16 +11,16 @@
             <div class="ltablet:self-center font-sans lg:self-center">
               <h2 class="text-3xl font-medium text-white sm:text-4xl">
                 <span class="block">Ready to dive in?</span>
-                <span class="block">Explore all available components.</span>
+                <span class="block">Explore all possibilities.</span>
               </h2>
               <p class="mt-4 text-lg leading-6 text-white">
                 We built a great documentation to help you get started. Each
-                component has a demo page and code snippets showing how to use
+                feature has a demo page showing how to use
                 them.
               </p>
               <div class="mt-8 flex items-center gap-2">
                 <BaseButton to="/documentation" shape="curved" class="!h-11"
-                  >Open Documentation</BaseButton
+                  >Register and Download</BaseButton
                 >
               </div>
             </div>

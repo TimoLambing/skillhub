@@ -71,7 +71,7 @@ watch(selectedStyle, (value) => {
           </div>
       </div>
     </div>
-    <div class="flex items-center justify-center bg-muted-900 p-24">
+    <!--<div class="flex items-center justify-center bg-muted-900 p-24">
       <BaseButton
             shape="curved"
             color="primary"
@@ -81,7 +81,7 @@ watch(selectedStyle, (value) => {
           >
             Find a Job
           </BaseButton>
-        </div>
+        </div>-->
 </template>
 
 <style scoped>

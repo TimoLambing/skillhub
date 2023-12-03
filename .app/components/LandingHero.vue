@@ -100,39 +100,35 @@ function useGaugePersonal() {
         <div data-aos="zoom-in" data-aos-duration="1200" class="relative z-30 text-center mb-[20%]">
           <BaseHeading
             as="h1"
-            size="5xl"
+            size="6xl"
             weight="light"
             lead="tight"
             class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
           >
-            We got the
+          AI Talent
             <span
               class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
-              >Skills</span
-            > your company needs
+              > Marketplace</span>
           </BaseHeading>
           <BaseParagraph
             size="lg"
             class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
           >
-            The only workforce platform you will ever need.<br />
-            AI and human synergy that finds top talent for firms and maintains oversight.
+          Revolutionize Your Workforce: AI-Powered Talent Matching & Comprehensive Management Tools
           </BaseParagraph>
           <div class="flex flex-row items-center justify-center gap-2">
             <BaseButton
-            flavor="outline"
               shape="curved"
-              color="primary"
-              to="https://go.cssninja.io/buy-tairo"
+              to="#corporate"
               shadow="hover"
-              class="!h-12 w-44"
+              class="!h-12 w-44 text-xl"
             >
               Rent Talents
             </BaseButton>
             <BaseButton
               shape="curved"
               color="primary"
-              to="https://go.cssninja.io/buy-tairo"
+              to="#talent"
               shadow="hover"
               class="!h-12 w-44"
             >
@@ -164,14 +160,14 @@ function useGaugePersonal() {
         </BaseHeading>
       </div>
       <div class="btn-area items-center justify-center">
-              <nuxt-link to="/">
-                <img src="/img/mobile/app-store.png" alt="app store">
-              </nuxt-link>
-              <nuxt-link to="/">
-                <img src="/img/mobile/play-store.png" alt="play store">
-              </nuxt-link>
-              <div id="watched_counter" />
-            </div>
+        <nuxt-link to="/">
+          <img src="/img/mobile/app-store.png" alt="app store">
+        </nuxt-link>
+        <nuxt-link to="/">
+          <img src="/img/mobile/play-store.png" alt="play store">
+        </nuxt-link>
+        <div id="watched_counter" />
+      </div>
       <!-- Components -->
       <fieldset
         disabled
@@ -387,7 +383,10 @@ function useGaugePersonal() {
           </div>
         </div>
       </fieldset>
-
+    </div>
+  </div>
+  <div class="bg-gradient-to-b from-muted-900 to-primary-900" id="talent">
+    <div>
       <div data-aos="zoom-in" data-aos-duration="900" class="mx-auto w-full max-w-4xl px-4 items-center justify-center">
           <div class="flex flex-col items-center justify-center text-center pt-32">
             <!-- Talent Heading -->
@@ -413,7 +412,7 @@ function useGaugePersonal() {
             </BaseParagraph>
 
             <!-- Badges and Heading Container -->
-            <div class="flex items-center justify-center gap-4 mt-4 border-[1px] border border-white rounded-full">
+            <div class="flex items-center justify-center gap-4 mt-4 border-[1px] border-white rounded-full">
               <!-- Verified Badge -->
               <img src="/img/verified.png" alt="Verified Badge" class="h-12 w-12" />
 

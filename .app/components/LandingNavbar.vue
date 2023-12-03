@@ -43,7 +43,7 @@ const { open } = usePanels()
           Recruiters
         </NuxtLink>
         <NuxtLink
-          to="#talents"
+          to="#talent"
           class="inline-flex items-center justify-center px-6"
           data-aos="zoom-in" data-aos-duration="1200"
           @click="isMobileOpen = false"
