@@ -105,7 +105,7 @@ function useGaugePersonal() {
             lead="tight"
             class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
           >
-          AI Talent
+          AI Powered Talent
             <span
               class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
               > Marketplace</span>
@@ -114,7 +114,13 @@ function useGaugePersonal() {
             size="lg"
             class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
           >
-          Revolutionize Your Workforce: AI-Powered Talent Matching & Comprehensive Management Tools
+          Revolutionize Your Workforce: A Synergy of Human Expertise and AI-Powered Talent Matching in a Single Comprehensive Management Tool.
+          </BaseParagraph>
+          <BaseParagraph
+            size="lg"
+            class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
+          >
+          <span class="italic text-sm">"Ending unemployment by changing the game"</span>
           </BaseParagraph>
           <div class="flex flex-row items-center justify-center gap-2">
             <BaseButton
@@ -141,10 +147,60 @@ function useGaugePersonal() {
         </div>
       </div>
       <Toaster />
+      <div class="flex flex-col items-center justify-center text-center pt-32">
+            <!-- Talent Heading -->
+            <BaseText
+              class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
+            >
+              for corporate clients
+            </BaseText>
+            <BaseHeading
+              as="h2"
+              size="4xl"
+              weight="light"
+              lead="tight"
+              class="text-muted-800 mx-auto mb-4 dark:text-white"
+            >
+              Get verified and land a <span class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4">Job</span>
+            </BaseHeading>
+            <BaseParagraph
+              size="lg"
+              class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
+            >
+              Join Skillhub, where our team works with AI to match your unique skills with exciting job opportunities. SkillHub provides a comprehensive suite of features including earnings, forecasts, contracts, payments, and detailed project and employer information.
+            </BaseParagraph>
+
+            <!-- Badges and Heading Container -->
+            <div class="flex items-center justify-center gap-4 mt-4 border-[1px] border-white rounded-full">
+              <!-- Verified Badge -->
+              <img src="/img/verified.png" alt="Verified Badge" class="h-12 w-12" />
+
+
+              <!-- Verified Heading -->
+              <BaseHeading
+              as="h1"
+              size="xl"
+              weight="light"
+              lead="tight"
+              class="text-muted-800 xs:!text-4xl mx-auto dark:text-white"
+              >
+              Verified
+            </BaseHeading>
+
+            <!-- Specialist Badge -->
+            <div class="bg-dark-500 p-4">
+              <span class="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
+                <span aria-hidden class="absolute inset-0 bg-gray-200 opacity-50 rounded-full"></span>
+                <span class="relative">Specialist</span>
+                <span class="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
+              </span>
+            </div>
+          </div>
+        </div>
       <div class="relative z-30 pt-32 text-center" id="corporate">
-        <BaseText
+        <!-- <BaseText
           class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
-          >Corporate</BaseText>
+          >Corporate</BaseText> -->
         <BaseHeading
           as="h1"
           size="3xl"
@@ -393,7 +449,7 @@ function useGaugePersonal() {
             <BaseText
               class="text-primary-500 mb-2 text-[0.65rem] uppercase tracking-wider"
             >
-              Talent
+              For talented specialists
             </BaseText>
             <BaseHeading
               as="h2"

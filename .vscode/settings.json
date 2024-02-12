@@ -1,8 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    // "source.fixAll": false,
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -22,5 +21,10 @@
   },
   "tailwindCSS.experimental.configFile": ".demo/tailwind.config.ts",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "vue.codeActions.enabled": false
+  "vue.codeActions.enabled": false,
+  "[typescript][vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  }
 }
